@@ -45,7 +45,7 @@
 %
 % \iffalse
 %<*driver>
-\ProvidesFile{ucasthesis.dtx}[2014/10/01 1.0 dev University of Chinese Academy of Sciences Thesis Template]
+\ProvidesFile{bitthesis.dtx}[2014/10/01 1.0 dev University of Chinese Academy of Sciences Thesis Template]
 \documentclass[10pt]{ltxdoc}
 \usepackage{dtx-style}
 \EnableCrossrefs
@@ -61,7 +61,7 @@
 % \GetFileInfo{\jobname.dtx}
 % \MakeShortVerb{\|}
 %
-% \def\ucasthesis{\textsc{ucas}\-\textsc{Thesis}}
+% \def\bitthesis{\textsc{bit}\-\textsc{Thesis}}
 % \def\pkg#1{\texttt{#1}}
 %
 %
@@ -91,7 +91,7 @@
 % \let\@fnsymbol\@arabic
 % \makeatother
 %
-% \title{\ucasthesis：中国科学院大学学位论文模板\thanks{University of Chinese Academy of Sciences \LaTeX{} Thesis Template.}}
+% \title{\bitthesis：中国科学院大学学位论文模板\thanks{University of Chinese Academy of Sciences \LaTeX{} Thesis Template.}}
 % \author{{\fangsong 作者：朝鲁\thanks{wuchaolu@gmail.com}}\\[5pt]{\fangsong 中国科学院计算技术研究所}\\[5pt] \texttt{wuchaolu@gmail.com}\\{\fangsong 原作者：薛瑞尼\thanks{LittleLeo@newsmth}}\\[5pt]{\fangsong 清华大学计算机系高性能所}\\[5pt] \texttt{xueruini@gmail.com}}
 % \date{v\fileversion\ (\filedate)}
 % \maketitle\thispagestyle{empty}
@@ -137,7 +137,7 @@
 % \pagenumbering{arabic}
 % \pagestyle{headings}
 % \section{模板介绍}
-% \ucasthesis\ (\textbf{UCAS} \textbf{Thesis}) 是为了帮助中国科学院大学毕业
+% \bitthesis\ (\textbf{UCAS} \textbf{Thesis}) 是为了帮助中国科学院大学毕业
 % 生撰写学位论文而编写的 \LaTeX{} 论文模板。
 %
 % 本文档将尽量完整的介绍模板的使用方法，如有不清楚之处可以参考示例文档或者给邮件
@@ -145,7 +145,7 @@
 % 在的这个版本基本上满足了学校的要求，但难免还存在不足之处，欢迎大家积极反馈。
 %
 % {\color{blue}\fangsong 模板的作用在于减轻论文写作过程中格式调整的时间，其前提就是遵
-%   守模板的用法，否则即使使用了 \ucasthesis{} 也难以保证输出的论文符合学校规范。}
+%   守模板的用法，否则即使使用了 \bitthesis{} 也难以保证输出的论文符合学校规范。}
 %
 %
 % \section{安装}
@@ -170,13 +170,13 @@
 % 
 % \subsection{UCASThesis下载}
 % UCASThesis 相关链接：
-% \href{https://github.com/xiaoyao9933/ucasthesis}{Github}
+% \href{https://github.com/xiaoyao9933/bitthesis}{Github}
 % UCASThesis 的开发版本同样可以在 Github 上获得：
 % \begin{shell}
-% $ git clone git://github.com/xiaoyao9933/ucasthesis.git
+% $ git clone git://github.com/xiaoyao9933/bitthesis.git
 % \end{shell}
 % \subsection{模板的组成部分}
-% 下表列出了 \ucasthesis{} 的主要文件及其功能介绍：
+% 下表列出了 \bitthesis{} 的主要文件及其功能介绍：
 %
 % \begin{center}
 %   \begin{longtable}{l|p{10cm}}
@@ -188,29 +188,29 @@
 % \endhead
 % \endfoot
 % \endlastfoot
-% ucasthesis.ins & 模板驱动文件 \\
-% ucasthesis.dtx & 模板文档代码的混合文件\\
-% ucasthesis.cls & 模板类文件\\
-% ucasthesis.cfg & 模板配置文件\\
-% ucasbib.bst & 参考文献样式文件\\\hline
+% bitthesis.ins & 模板驱动文件 \\
+% bitthesis.dtx & 模板文档代码的混合文件\\
+% bitthesis.cls & 模板类文件\\
+% bitthesis.cfg & 模板配置文件\\
+% bitbib.bst & 参考文献样式文件\\\hline
 % main.tex & 示例文档主文件\\
 % spine.tex & 书脊示例文档\\
 % ref/ & 示例文档参考文献目录\\
 % data/ & 示例文档章节具体内容\\
 % figures/ & 示例文档图片路径\\
-% ucastils.sty & 为示例文档加载其它宏包\\\hline
+% bittils.sty & 为示例文档加载其它宏包\\\hline
 % Makefile & self-explanation \\
 % Readme & self-explanation\\
-% \textbf{ucasthesis.pdf} & 用户手册（本文档）\\\hline
+% \textbf{bitthesis.pdf} & 用户手册（本文档）\\\hline
 %   \end{longtable}
 % \end{center}
 %
 % 需要说明几点：
 % \begin{itemize}
-% \item \emph{ucasthesis.cls} 和 \emph{ucasthesis.cfg} 可以
-%   由 \emph{ucasthesis.ins} 和 \emph{ucasthesis.dtx} 生成，但为了降低新
+% \item \emph{bitthesis.cls} 和 \emph{bitthesis.cfg} 可以
+%   由 \emph{bitthesis.ins} 和 \emph{bitthesis.dtx} 生成，但为了降低新
 %   手用户的使用难度，故将 cls和 cfg 一起发布。
-% \item 使用前认真阅读文档：\emph{ucasthesis.pdf}.
+% \item 使用前认真阅读文档：\emph{bitthesis.pdf}.
 % \end{itemize}
 % 
 % \subsection{准备工作}
@@ -226,7 +226,7 @@
 %   indentfirst & paralist & txfonts & natbib & hyperref & CJKnumb \\
 %   graphicx & \pkg{subcaption} &
 %   \pkg{caption}\footnote{版本要求：$\geq$2006/03/21 v3.0j} &
-%   \pkg{ucasbib.bst} & &\\\hline
+%   \pkg{bitbib.bst} & &\\\hline
 % \end{tabular}
 % \end{minipage}
 % \end{center}
@@ -243,24 +243,24 @@
 % {\heiti 说明：默认的发行包中已经包含了所有文件，可以直接使用。如果对如何由 dtx 生
 %   成模板文件以及模板文档不感兴趣，请跳过本小节。}
 %
-% 模板解压缩后生成文件夹 ucasthesis-VERSION\footnote{VERSION 为版本号。}，其中包括：
-% 模板源文件（ucasthesis.ins 和 ucasthesis.dtx），参考文献样式 ucasbib.bst，示例文档
-% （main.tex，spine.tex，ucastils.sty\footnote{我把可能用到但不一定用到的包以及一
-%   些命令定义都放在这里面，以免 ucasthesis.cls 过分臃
+% 模板解压缩后生成文件夹 bitthesis-VERSION\footnote{VERSION 为版本号。}，其中包括：
+% 模板源文件（bitthesis.ins 和 bitthesis.dtx），参考文献样式 bitbib.bst，示例文档
+% （main.tex，spine.tex，bittils.sty\footnote{我把可能用到但不一定用到的包以及一
+%   些命令定义都放在这里面，以免 bitthesis.cls 过分臃
 %   肿。}，data/ 和 figures/ 和 ref/）。在使用之前需要先生成模板文件和配置文件
 % （具体命令细节请参考 |Readme| 和 |Makefile|）：
 %
 % \begin{shell}
-% $ cd ucasthesis-VERSION
-% # 生成 ucasthesis.cls 和 ucasthesis.cfg
-% $ latex ucasthesis.ins
+% $ cd bitthesis-VERSION
+% # 生成 bitthesis.cls 和 bitthesis.cfg
+% $ latex bitthesis.ins
 %
 % # 下面的命令用来生成用户手册，可以不执行
-% $ latex ucasthesis.dtx
-% $ makeindex -s gind.ist -o ucasthesis.ind ucasthesis.idx
-% $ makeindex -s gglo.ist -o ucasthesis.gls ucasthesis.glo
-% $ latex ucasthesis.dtx
-% $ latex ucasthesis.dtx  % 生成说明文档 ucasthesis.dvi
+% $ latex bitthesis.dtx
+% $ makeindex -s gind.ist -o bitthesis.ind bitthesis.idx
+% $ makeindex -s gglo.ist -o bitthesis.gls bitthesis.glo
+% $ latex bitthesis.dtx
+% $ latex bitthesis.dtx  % 生成说明文档 bitthesis.dvi
 % \end{shell}
 %
 %
@@ -312,7 +312,7 @@
 %
 % \subsubsection{xelatex}
 % \label{sec:xelatex}
-% XeTeX 最大的优势就是不再需要繁琐的字体配置。\ucasthesis{} 通过 \pkg{xeCJK} 来控
+% XeTeX 最大的优势就是不再需要繁琐的字体配置。\bitthesis{} 通过 \pkg{xeCJK} 来控
 % 制中文字体和标点压缩。模板里默认用的是中易的四款免费字体（宋，黑，楷，仿宋），
 % 用户可以根据自己的实际情况方便的替换。
 %
@@ -322,13 +322,13 @@
 % \subsubsection{自动化过程}
 % \label{sec:automation}
 % 上面的例子只是给出一般情况下的使用方法，可以发现虽然命令很简单，但是每次都输入
-% 的话还是非常罗嗦的，所以 \ucasthesis{} 还提供了一些自动处理的文件。
+% 的话还是非常罗嗦的，所以 \bitthesis{} 还提供了一些自动处理的文件。
 %
 % 我们提供了一个简单的 \texttt{Makefile}：
 % \begin{shell}
 % $ make clean
-% $ make cls       # 生成 ucasthesis.cls 和 ucasthesis.cfg
-% $ make doc       # 生成说明文档 ucasthesis.pdf
+% $ make cls       # 生成 bitthesis.cls 和 bitthesis.cfg
+% $ make doc       # 生成说明文档 bitthesis.pdf
 % $ make thesis    # 生成示例文档 main.pdf
 % $ make spine     # 生成书脊 spine.pdf
 % \end{shell}
@@ -339,15 +339,15 @@
 %
 % \subsection{升级}
 % \label{sec:updgrade}
-% \ucasthesis{} 升级非常简单，下载最新的版本，
-% 将 ucasthesis.ins，ucasthesis.dtx 和ucasbib.bst 拷贝至工作目录覆盖相应的文件，然后
+% \bitthesis{} 升级非常简单，下载最新的版本，
+% 将 bitthesis.ins，bitthesis.dtx 和bitbib.bst 拷贝至工作目录覆盖相应的文件，然后
 % 运行：
 % \begin{shell}
-% $ latex ucasthesis.ins
+% $ latex bitthesis.ins
 % \end{shell}
 %
-% 生成新的类文件和配置文件即可。当然也可以直接拷贝 ucasthesis.cls, ucasthesis.cfg
-% 和 ucasbib.bst，免去上面命令的执行。只要明白它的工作原理，这个不难操作。
+% 生成新的类文件和配置文件即可。当然也可以直接拷贝 bitthesis.cls, bitthesis.cfg
+% 和 bitbib.bst，免去上面命令的执行。只要明白它的工作原理，这个不难操作。
 %
 %
 % \section{使用说明}
@@ -364,14 +364,14 @@
 % \item \href{http://www.newsmth.net/bbsdoc.php?board=TeX}{\TeX@newsmth}
 % \end{itemize}
 %
-% \subsection{\ucasthesis{} 使用向导}
+% \subsection{\bitthesis{} 使用向导}
 % \label{sec:userguide}
-% 推荐新用户先看网上的《\ucasthesis{} 使用向导》幻灯片\footnote{有点老了，不过还是
+% 推荐新用户先看网上的《\bitthesis{} 使用向导》幻灯片\footnote{有点老了，不过还是
 %   很有帮助的。}，那份讲稿比这份文档简练易懂。
 %
-% \subsection{\ucasthesis{} 示例文件}
+% \subsection{\bitthesis{} 示例文件}
 % \label{sec:userguide1}
-% 模板核心文件只有三个：ucasthesis.cls，ucasthesis.cfg 和 ucasbib.bst，但是如果没有
+% 模板核心文件只有三个：bitthesis.cls，bitthesis.cfg 和 bitbib.bst，但是如果没有
 % 示例文档用户会发现很难下手。所以推荐新用户从模板自带的示例文档入手，里面包括了
 % 论文写作用到的所有命令及其使用方法，只需要用自己的内容进行相应替换就可以。对于
 % 不清楚的命令可以查阅本手册。下面的例子描述了模板中章节的组织形式，来自于示例文
@@ -379,17 +379,17 @@
 %
 % \begin{example}
 % 
-% \documentclass[master,adobefonts]{ucasthesis}
-% %\documentclass[doctor]{ucasthesis}
+% \documentclass[master,adobefonts]{bitthesis}
+% %\documentclass[doctor]{bitthesis}
 % %\documentclass[%
 % %  master|doctor, % 必选选项
 % %  secret, % 可选选项
 % %  openany|openright, % 可选选项
 % %  arialtoc,arialtitle % 可选选项
-% %  ]{ucasthesis}
+% %  ]{bitthesis}
 %
 % % 所有其它可能用到的包都统一放到这里了，可以根据自己的实际添加或者删除。
-% \usepackage{ucastils}
+% \usepackage{bittils}
 %
 % % 可以在这里修改配置文件中的定义，导言区可以使用中文。
 % % \def\myname{薛瑞尼}
@@ -429,7 +429,7 @@
 %
 %
 % % 参考文献
-% \bibliographystyle{ucasbib}
+% \bibliographystyle{bitbib}
 % \bibliography{ref/refs}
 %
 %
@@ -454,19 +454,19 @@
 % \item[master]
 %   如果写硕士论文将此选项打开。
 %   \begin{example}
-% \documentclass[master]{ucasthesis}
+% \documentclass[master]{bitthesis}
 %   \end{example}
 %
 % \item[doctor]
 %   如果写博士论文将此选项打开。
 %   \begin{example}
-% \documentclass[doctor]{ucasthesis}
+% \documentclass[doctor]{bitthesis}
 %   \end{example}
 %
 % \item[postdoctor]
 %   如果写博士博士后出站报告将此选项打开。
 %   \begin{example}
-% \documentclass[postdoctor]{ucasthesis}
+% \documentclass[postdoctor]{bitthesis}
 %   \end{example}
 %
 % \item[secret]
@@ -474,16 +474,16 @@
 %   密级别和时间。二者默认分别为\textbf{秘密}和当前年份。可以通过：
 %   \cs{secretlevel}|{|绝密|}| 和 \cs{secretyear}|{|10|}| 年独立修改。
 %   \begin{example}
-% \documentclass[master, secret]{ucasthesis}
+% \documentclass[master, secret]{bitthesis}
 %   \end{example}
 %
 %
 % \item[openany]
 %   正规出版物的章节出现在奇数页，也就是右手边的页面，这就是 \texttt{openright}，
-%   也是 \ucasthesis 的默认选项。在这种情况下，如果前一章的最后一页也是奇数，那么
+%   也是 \bitthesis 的默认选项。在这种情况下，如果前一章的最后一页也是奇数，那么
 %   模板会自动生成一个纯粹的空白页，很多人不是很习惯这种方式，而且学校的格式似乎
 %   更倾向于页面连续，那就是通常所说的 \texttt{openany}。{\fangsong 目前所有论文都是
-%      openany。}这两个选项不用专门设置，\ucasthesis{} 会根据当前论文类型自动选
+%      openany。}这两个选项不用专门设置，\bitthesis{} 会根据当前论文类型自动选
 %   择。
 %
 %
@@ -609,7 +609,7 @@
 % 的 |\cite{key}|，而 |\onlinecite{key}| 则用来生成正文模式。
 %
 % 关于参考文献模板推荐使用 \BibTeX{}，关于中文参考文献需要额外增加一个 Entry: lang，将其设置为 \texttt{zh}
-% 用来指示此参考文献为中文，以便 ucasbib.bst 处理。如：
+% 用来指示此参考文献为中文，以便 bitbib.bst 处理。如：
 % \begin{example}
 % @INPROCEEDINGS{cnproceed,
 %   author    = {王重阳 and 黄药师 and 欧阳峰 and 洪七公 and 段皇帝},
@@ -638,7 +638,7 @@
 % 那么直接调用此命令即可。否则，就要像例子里面那样做一些微调（参看模板自带
 % 的 spine.tex）。下面是一个列子：
 % \begin{example}
-% \documentclass[master]{ucasthesis}
+% \documentclass[master]{bitthesis}
 % \begin{document}
 % \ctitle{论文中文题目}
 % \cauthor{中文姓名}
@@ -899,7 +899,7 @@
 %
 % \subsection{数学环境}
 % \label{sec:math}
-% \ucasthesis{} 定义了常用的数学环境：
+% \bitthesis{} 定义了常用的数学环境：
 %
 % \begin{center}
 % \begin{tabular}{*{7}{l}}\hline
@@ -935,7 +935,7 @@
 %
 % \subsection{自定义以及其它}
 % \label{sec:othercmd}
-% 模板的配置文件 ucasthesis.cfg 中定义了很多固定词汇，一般无须修改。如果有特殊需求，
+% 模板的配置文件 bitthesis.cfg 中定义了很多固定词汇，一般无须修改。如果有特殊需求，
 % 推荐在导言区使用 \cs{renewcommand}。当然，导言区里可以直接使用中文。
 %
 %
@@ -971,8 +971,8 @@
 % \subsection{基本信息}
 %    \begin{macrocode}
 %<cls>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
-%<cls>\ProvidesClass{ucasthesis}
-%<cfg>\ProvidesFile{ucasthesis.cfg}
+%<cls>\ProvidesClass{bitthesis}
+%<cfg>\ProvidesFile{bitthesis.cfg}
 %<cls|cfg>[2012/07/28 4.8dev University of Chinese Academy of Sciences Thesis Template]
 %    \end{macrocode}
 %
@@ -983,39 +983,39 @@
 % 定义论文类型以及是否涉密
 %    \begin{macrocode}
 %<*cls>
-\hyphenation{ucas-Thesis}
-\def\ucasthesis{\textsc{ucasthesis}}
+\hyphenation{bit-Thesis}
+\def\bitthesis{\textsc{bitthesis}}
 \def\version{4.8dev}
-\newif\ifucas@master\ucas@masterfalse
-\newif\ifucas@doctor\ucas@doctorfalse
-\newif\ifucas@secret\ucas@secretfalse
-\DeclareOption{master}{\ucas@mastertrue}
-\DeclareOption{doctor}{\ucas@doctortrue}
-\DeclareOption{secret}{\ucas@secrettrue}
+\newif\ifbit@master\bit@masterfalse
+\newif\ifbit@doctor\bit@doctorfalse
+\newif\ifbit@secret\bit@secretfalse
+\DeclareOption{master}{\bit@mastertrue}
+\DeclareOption{doctor}{\bit@doctortrue}
+\DeclareOption{secret}{\bit@secrettrue}
 %    \end{macrocode}
 %
 %
 % 如果需要使用 arial 字体，请打开 [arial] 选项
 %    \begin{macrocode}
-\newif\ifucas@arial   %!
-\DeclareOption{arial}{\ucas@arialtrue}
+\newif\ifbit@arial   %!
+\DeclareOption{arial}{\bit@arialtrue}
 %    \end{macrocode}
 %
 % 目录中英文是否用 arial
 %    \begin{macrocode}
-\newif\ifucas@arialtoc
-\DeclareOption{arialtoc}{\ucas@arialtoctrue}
+\newif\ifbit@arialtoc
+\DeclareOption{arialtoc}{\bit@arialtoctrue}
 %    \end{macrocode}
 % 章节标题中的英文是否用 arial
 %    \begin{macrocode}
-\newif\ifucas@arialtitle
-\DeclareOption{arialtitle}{\ucas@arialtitletrue}
+\newif\ifbit@arialtitle
+\DeclareOption{arialtitle}{\bit@arialtitletrue}
 %    \end{macrocode}
 %
 % noraggedbottom 选项
 %    \begin{macrocode}
-\newif\ifucas@raggedbottom\ucas@raggedbottomtrue
-\DeclareOption{noraggedbottom}{\ucas@raggedbottomfalse}
+\newif\ifbit@raggedbottom\bit@raggedbottomtrue
+\DeclareOption{noraggedbottom}{\bit@raggedbottomfalse}
 %    \end{macrocode}
 %
 % 将选项传递给 ctexbook 类
@@ -1038,9 +1038,9 @@
 % 用户至少要提供一个选项：指定论文类型。
 %    \begin{macrocode}
 
-\ifucas@master\relax\else
-  \ifucas@doctor\relax\else
-      \ClassError{ucasthesis}%
+\ifbit@master\relax\else
+  \ifbit@doctor\relax\else
+      \ClassError{bitthesis}%
                    {You have to specify one of thesis options: master or doctor.}{}
   \fi
 \fi
@@ -1090,7 +1090,7 @@
 %
 % raggedbottom，禁止Latex自动调整多余的页面底部空白，并保持脚注仍然在底部。
 %    \begin{macrocode}
-\ifucas@raggedbottom
+\ifbit@raggedbottom
   \RequirePackage[bottom,perpage]{footmisc}
   \raggedbottom
 \else
@@ -1128,10 +1128,10 @@
 % arial 字体需要单独安装，如果不使用 arial 字体，可以用 helvet 字体 |\textsf|
 % 模拟，二者基本没有差别。
 %    \begin{macrocode}
-  \ifucas@arial
+  \ifbit@arial
     \IfFileExists{arial.sty}%
                  {\RequirePackage{arial}}%
-                 {\ClassWarning{ucasthesis}{no arial.sty availiable!}}
+                 {\ClassWarning{bitthesis}{no arial.sty availiable!}}
   \fi
 \fi
 %    \end{macrocode}
@@ -1175,18 +1175,18 @@
   {\CJKnumber{\getrefnumber{#1}}}}}
 
 \RequirePackage{xcolor}
-\definecolor{ucascitecolor}{rgb}{0.0, 0.50, 0.0}
-\definecolor{ucaslinkcolor}{rgb}{0.75, 0.0, 0.0}
-\definecolor{ucasurlcolor}{rgb}{0.0, 0.0, 0.75}
+\definecolor{bitcitecolor}{rgb}{0.0, 0.50, 0.0}
+\definecolor{bitlinkcolor}{rgb}{0.75, 0.0, 0.0}
+\definecolor{biturlcolor}{rgb}{0.0, 0.0, 0.75}
 \hypersetup{%
   bookmarksnumbered=true,
   bookmarksopen=true,
   bookmarksopenlevel=1,
   breaklinks=true,
   colorlinks=true,
-  citecolor=ucascitecolor,
-  linkcolor=ucaslinkcolor,
-  urlcolor=ucasurlcolor,
+  citecolor=bitcitecolor,
+  linkcolor=bitlinkcolor,
+  urlcolor=biturlcolor,
   plainpages=false,
   pdfpagelabels,
   pdfborder=0 0 0}
@@ -1212,17 +1212,17 @@
   \cleardoublepage
   \@mainmatterfalse
   \pagenumbering{Roman}
-  \pagestyle{ucas@empty}}
+  \pagestyle{bit@empty}}
 \renewcommand\mainmatter{%
   \cleardoublepage
   \@mainmattertrue
   \pagenumbering{arabic}
-  \pagestyle{ucas@headings}}
-  %#\ifucas@bachelor\pagestyle{ucas@plain}\else\pagestyle{ucas@headings}\fi}
+  \pagestyle{bit@headings}}
+  %#\ifbit@bachelor\pagestyle{bit@plain}\else\pagestyle{bit@headings}\fi}
 \renewcommand\backmatter{%
   \cleardoublepage
   \pagenumbering{roman}
-  \pagestyle{ucas@plain}
+  \pagestyle{bit@plain}
   \@mainmattertrue}
 %</cls>
 %    \end{macrocode}
@@ -1274,21 +1274,21 @@
 % 1bp = 72.27/72 pt
 % \end{verbatim}
 %
-% \begin{macro}{\ucas@define@fontsize}
+% \begin{macro}{\bit@define@fontsize}
 % 根据习惯定义字号。用法：
 %
-% \cs{ucas@define@fontsize}\marg{字号名称}\marg{磅数}
+% \cs{bit@define@fontsize}\marg{字号名称}\marg{磅数}
 %
 % 避免了字号选择和行距的紧耦合。所有字号定义时为单倍行距，并提供选项指定行距倍数。
 %    \begin{macrocode}
 %<*cls>
-\newlength\ucas@linespace
-\newcommand{\ucas@choosefont}[2]{%
-   \setlength{\ucas@linespace}{#2*\real{#1}}%
-   \fontsize{#2}{\ucas@linespace}\selectfont}
-\def\ucas@define@fontsize#1#2{%
+\newlength\bit@linespace
+\newcommand{\bit@choosefont}[2]{%
+   \setlength{\bit@linespace}{#2*\real{#1}}%
+   \fontsize{#2}{\bit@linespace}\selectfont}
+\def\bit@define@fontsize#1#2{%
   \expandafter\newcommand\csname #1\endcsname[1][\baselinestretch]{%
-    \ucas@choosefont{##1}{#2}}}
+    \bit@choosefont{##1}{#2}}}
 %    \end{macrocode}
 % \end{macro}
 % \begin{macro}{\chuhao}
@@ -1310,24 +1310,24 @@
 % \begin{macro}{\qihao}
 % \begin{macro}{\bahao}
 %    \begin{macrocode}
-\ucas@define@fontsize{chuhao}{42bp}
-\ucas@define@fontsize{xiaochu}{36bp}
-\ucas@define@fontsize{yihao}{26bp}
-\ucas@define@fontsize{xiaoyi}{24bp}
-\ucas@define@fontsize{erhao}{22bp}
-\ucas@define@fontsize{xiaoer}{18bp}
-\ucas@define@fontsize{sanhao}{16bp}
-\ucas@define@fontsize{xiaosan}{15bp}
-\ucas@define@fontsize{sihao}{14bp}
-\ucas@define@fontsize{banxiaosi}{13bp}
-\ucas@define@fontsize{xiaosi}{12bp}
-\ucas@define@fontsize{dawu}{11bp}
-\ucas@define@fontsize{wuhao}{10.5bp}
-\ucas@define@fontsize{xiaowu}{9bp}
-\ucas@define@fontsize{liuhao}{7.5bp}
-\ucas@define@fontsize{xiaoliu}{6.5bp}
-\ucas@define@fontsize{qihao}{5.5bp}
-\ucas@define@fontsize{bahao}{5bp}
+\bit@define@fontsize{chuhao}{42bp}
+\bit@define@fontsize{xiaochu}{36bp}
+\bit@define@fontsize{yihao}{26bp}
+\bit@define@fontsize{xiaoyi}{24bp}
+\bit@define@fontsize{erhao}{22bp}
+\bit@define@fontsize{xiaoer}{18bp}
+\bit@define@fontsize{sanhao}{16bp}
+\bit@define@fontsize{xiaosan}{15bp}
+\bit@define@fontsize{sihao}{14bp}
+\bit@define@fontsize{banxiaosi}{13bp}
+\bit@define@fontsize{xiaosi}{12bp}
+\bit@define@fontsize{dawu}{11bp}
+\bit@define@fontsize{wuhao}{10.5bp}
+\bit@define@fontsize{xiaowu}{9bp}
+\bit@define@fontsize{liuhao}{7.5bp}
+\bit@define@fontsize{xiaoliu}{6.5bp}
+\bit@define@fontsize{qihao}{5.5bp}
+\bit@define@fontsize{bahao}{5bp}
 %    \end{macrocode}
 % \end{macro}
 % \end{macro}
@@ -1394,45 +1394,45 @@
 % 没有页眉页脚。(code stolen from \pkg{fancyhdr})
 %    \begin{macrocode}
 %<*cls>
-\let\ucas@cleardoublepage\cleardoublepage
-\newcommand{\ucas@clearemptydoublepage}{%
-  \clearpage{\pagestyle{empty}\ucas@cleardoublepage}}
-\let\cleardoublepage\ucas@clearemptydoublepage
+\let\bit@cleardoublepage\cleardoublepage
+\newcommand{\bit@clearemptydoublepage}{%
+  \clearpage{\pagestyle{empty}\bit@cleardoublepage}}
+\let\cleardoublepage\bit@clearemptydoublepage
 %    \end{macrocode}
 %
-% 定义页眉和页脚。chapter 自动调用 thispagestyle{ucas@plain}，所以要重新定义 ucas@plain。
-% \begin{macro}{\ps@ucas@empty}
-% \begin{macro}{\ps@ucas@plain}
-% \begin{macro}{\ps@ucas@headings}
+% 定义页眉和页脚。chapter 自动调用 thispagestyle{bit@plain}，所以要重新定义 bit@plain。
+% \begin{macro}{\ps@bit@empty}
+% \begin{macro}{\ps@bit@plain}
+% \begin{macro}{\ps@bit@headings}
 % 定义三种页眉页脚格式：
 % \begin{itemize}
-% \item \texttt{ucas@empty}：页眉页脚都没有
-% \item \texttt{ucas@plain}：只显示页脚的页码
-% \item \texttt{ucas@headings}：页眉页脚同时显示
+% \item \texttt{bit@empty}：页眉页脚都没有
+% \item \texttt{bit@plain}：只显示页脚的页码
+% \item \texttt{bit@headings}：页眉页脚同时显示
 % \end{itemize}
 %    \begin{macrocode}
-\def\ps@ucas@empty{%
+\def\ps@bit@empty{%
   \let\@oddhead\@empty%
   \let\@evenhead\@empty%
   \let\@oddfoot\@empty%
   \let\@evenfoot\@empty}
-\def\ps@ucas@foot{%
+\def\ps@bit@foot{%
   \let\@oddhead\@empty%
   \let\@evenhead\@empty%
   \def\@oddfoot{\hfil\xiaowu\thepage\hfil}%
   \let\@evenfoot=\@oddfoot}
-\def\ps@ucas@plain{%
+\def\ps@bit@plain{%
   \def\@oddhead{\vbox to\headheight{%
-    \hb@xt@\textwidth{\hfill\xiaowu\songti\ucas@ctitle：\leftmark\hfill}%
+    \hb@xt@\textwidth{\hfill\xiaowu\songti\bit@ctitle：\leftmark\hfill}%
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
   \def\@oddfoot{\hfil\xiaowu\thepage\hfil}%
   \def\@evenhead{\vbox to\headheight{%
       \hb@xt@\textwidth{\xiaowu\songti%
-       \hfill \ucas@ctitle：\leftmark \hfill}%
+       \hfill \bit@ctitle：\leftmark \hfill}%
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
   \def\@oddfoot{\hfil\xiaowu\thepage\hfil}%
   \let\@evenfoot=\@oddfoot}
-\def\ps@ucas@headings{%
+\def\ps@bit@headings{%
   \def\@oddhead{\vbox to\headheight{%
     \hb@xt@\textwidth{\hfill\xiaowu\songti\leftmark\hfill}%
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
@@ -1465,9 +1465,9 @@
 %    \end{macrocode}
 %
 % 调整默认列表环境间的距离，以符合中文习惯。
-% \begin{macro}{ucas@item@space}
+% \begin{macro}{bit@item@space}
 %    \begin{macrocode}
-\def\ucas@item@space{%
+\def\bit@item@space{%
   \let\itemize\compactitem
   \let\enditemize\endcompactitem
   \let\enumerate\compactenum
@@ -1485,29 +1485,29 @@
 % 脚注字体：宋体小五，单倍行距。悬挂缩进 1.5 字符。标号在正文中是上标，在脚注中为
 % 正体。默认情况下 \cs{@makefnmark} 显示为上标，同时为脚标和正文所用，所以如果要区
 % 分，必须分别定义脚注的标号和正文的标号。
-% \begin{macro}{\ucas@textcircled}
+% \begin{macro}{\bit@textcircled}
 % 生成带圈的脚注数字。最多处理到 99，当然这个很容易扩展了。
 %    \begin{macrocode}
 %<*cls>
-\def\ucas@textcircled#1{%
+\def\bit@textcircled#1{%
   \ifnum \value{#1} <10 \textcircled{\xiaoliu\arabic{#1}}
   \else\ifnum \value{#1} <100 \textcircled{\qihao\arabic{#1}}\fi
   \fi}
 %    \end{macrocode}
 % \end{macro}
 %    \begin{macrocode}
-\renewcommand{\thefootnote}{\ucas@textcircled{footnote}}
-\renewcommand{\thempfootnote}{\ucas@textcircled{mpfootnote}}
+\renewcommand{\thefootnote}{\bit@textcircled{footnote}}
+\renewcommand{\thempfootnote}{\bit@textcircled{mpfootnote}}
 \def\footnoterule{\vskip-3\p@\hrule\@width0.3\textwidth\@height0.4\p@\vskip2.6\p@}
-\let\ucas@footnotesize\footnotesize
-\renewcommand\footnotesize{\ucas@footnotesize\xiaowu[1.5]}
+\let\bit@footnotesize\footnotesize
+\renewcommand\footnotesize{\bit@footnotesize\xiaowu[1.5]}
 \def\@makefnmark{\textsuperscript{\hbox{\normalfont\@thefnmark}}}
 \long\def\@makefntext#1{
   \bgroup
-    \newbox\ucas@tempboxa
-    \setbox\ucas@tempboxa\hbox{%
+    \newbox\bit@tempboxa
+    \setbox\bit@tempboxa\hbox{%
       \hb@xt@ 2em{\@thefnmark\hss}}
-    \leftmargin\wd\ucas@tempboxa
+    \leftmargin\wd\bit@tempboxa
     \rightmargin\z@
     \linewidth \columnwidth
     \advance \linewidth -\leftmargin
@@ -1515,7 +1515,7 @@
     \footnotesize
     \@setpar{{\@@par}}%
     \leavevmode
-    \llap{\box\ucas@tempboxa}%
+    \llap{\box\bit@tempboxa}%
     #1
   \par\egroup}
 %</cls>
@@ -1543,18 +1543,18 @@
 %   \gdef\df@tag{\maketag@@@{#1}\def\@currentlabel{#1}}}
 % \end{verbatim}
 %    \begin{macrocode}
-\def\make@df@tag{\@ifstar\ucas@make@df@tag@@\make@df@tag@@@}
-\def\ucas@make@df@tag@@#1{\gdef\df@tag{\ucas@maketag{#1}\def\@currentlabel{#1}}}
+\def\make@df@tag{\@ifstar\bit@make@df@tag@@\make@df@tag@@@}
+\def\bit@make@df@tag@@#1{\gdef\df@tag{\bit@maketag{#1}\def\@currentlabel{#1}}}
 % redefinitation of tagform brokes eqref!
 \renewcommand{\eqref}[1]{\textup{(\ref{#1})}}
 \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter-\fi\@arabic\c@equation}
-%\ifucas@bachelor
-%  \def\ucas@maketag#1{\maketag@@@{%
+%\ifbit@bachelor
+%  \def\bit@maketag#1{\maketag@@@{%
 %    (\ignorespaces\text{\equationname\hskip0.5em}#1\unskip\@@italiccorr)}}
 %  \def\tagform@#1{\maketag@@@{%
 %    (\ignorespaces\text{\equationname\hskip0.5em}#1\unskip\@@italiccorr)\equcaption{#1}}}
 %\else
-\def\ucas@maketag#1{\maketag@@@{(\ignorespaces #1\unskip\@@italiccorr)}}
+\def\bit@maketag#1{\maketag@@@{(\ignorespaces #1\unskip\@@italiccorr)}}
 \def\tagform@#1{\maketag@@@{(\ignorespaces #1\unskip\@@italiccorr)\equcaption{#1}}}
 %\fi
 %    \end{macrocode}
@@ -1639,22 +1639,22 @@
 % \end{itemize}
 %    \begin{macrocode}
 \let\old@tabular\@tabular
-\def\ucas@tabular{\dawu[1.5]\old@tabular}
-\DeclareCaptionLabelFormat{ucas}{{\dawu[1.5]\songti #1~\rmfamily #2}}
-\DeclareCaptionLabelSeparator{ucas}{\hspace{1em}}
-\DeclareCaptionFont{ucas}{\dawu[1.5]}
-\captionsetup{labelformat=ucas,labelsep=ucas,font=ucas}
+\def\bit@tabular{\dawu[1.5]\old@tabular}
+\DeclareCaptionLabelFormat{bit}{{\dawu[1.5]\songti #1~\rmfamily #2}}
+\DeclareCaptionLabelSeparator{bit}{\hspace{1em}}
+\DeclareCaptionFont{bit}{\dawu[1.5]}
+\captionsetup{labelformat=bit,labelsep=bit,font=bit}
 \captionsetup[table]{position=top,belowskip={12bp-\intextsep},aboveskip=6bp}
 \captionsetup[figure]{position=bottom,belowskip={12bp-\intextsep},aboveskip=6bp}
-\captionsetup[sub]{font=ucas,skip=6bp}
+\captionsetup[sub]{font=bit,skip=6bp}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \renewcommand{\thesubtable}{(\alph{subtable})}
 % \renewcommand{\p@subfigure}{:}
 %    \end{macrocode}
 % 我们采用 \pkg{longtable} 来处理跨页的表格。同样我们需要设置其默认字体为五号。
 %    \begin{macrocode}
-\let\ucas@LT@array\LT@array
-\def\LT@array{\dawu[1.5]\ucas@LT@array} % set default font size
+\let\bit@LT@array\LT@array
+\def\LT@array{\dawu[1.5]\bit@LT@array} % set default font size
 %    \end{macrocode}
 %
 % \begin{macro}{\hlinewd}
@@ -1685,8 +1685,8 @@
 \renewcommand\tablename{表}
 \newcommand\CJKprepartname{第}
 \newcommand\CJKpartname{部分}
-\CTEXnumber{\ucas@thepart}{\@arabic\c@part}
-\newcommand\CJKthepart{\ucas@thepart}
+\CTEXnumber{\bit@thepart}{\@arabic\c@part}
+\newcommand\CJKthepart{\bit@thepart}
 \newcommand\CJKprechaptername{第}
 \newcommand\CJKchaptername{章}
 
@@ -1701,11 +1701,11 @@
 \let\CJK@todaysave=\today
 \def\CJK@todaysmall@short{\the\year 年 \the\month 月}
 \def\CJK@todaysmall{\CJK@todaysmall@short \the\day 日}
-\CTEXdigits{\ucas@CJK@year}{\the\year}
-\CTEXnumber{\ucas@CJK@month}{\the\month}
-\CTEXnumber{\ucas@CJK@day}{\the\day}
-\def\CJK@todaybig@short{\ucas@CJK@year{}年\ucas@CJK@month{}月}
-\def\CJK@todaybig{\CJK@todaybig@short{}\ucas@CJK@day{}日}
+\CTEXdigits{\bit@CJK@year}{\the\year}
+\CTEXnumber{\bit@CJK@month}{\the\month}
+\CTEXnumber{\bit@CJK@day}{\the\day}
+\def\CJK@todaybig@short{\bit@CJK@year{}年\bit@CJK@month{}月}
+\def\CJK@todaybig{\CJK@todaybig@short{}\bit@CJK@day{}日}
 \def\CJK@today{\CJK@todaysmall}
 \renewcommand\today{\CJK@today}
 \newcommand\CJKtoday[1][1]{%
@@ -1722,8 +1722,8 @@
 % 如果章节题目中的英文要使用 arial，那么就加上 \cs{sffamily}
 %    \begin{macrocode}
 %<*cls>
-\ifucas@arialtitle
-  \def\ucas@title@font{\sffamily}
+\ifbit@arialtitle
+  \def\bit@title@font{\sffamily}
 \fi
 %    \end{macrocode}
 %
@@ -1734,7 +1734,7 @@
 %    \begin{macrocode}
 \renewcommand\chapter{%
   \cleardoublepage%
-  \thispagestyle{ucas@foot}%
+  \thispagestyle{bit@foot}%
   \global\@topnum\z@%
   \@afterindenttrue%
   \secdef\@chapter\@schapter}
@@ -1754,7 +1754,7 @@
 \def\@makechapterhead#1{%
   \vspace*{17bp}
   {\parindent \z@ \centering
-    \csname ucas@title@font\endcsname\heiti\sihao[2.41]
+    \csname bit@title@font\endcsname\heiti\sihao[2.41]
     \ifnum \c@secnumdepth >\m@ne
       \@chapapp\hskip1em
     \fi
@@ -1766,7 +1766,7 @@
 \def\@makeschapterhead#1{%
   \vspace*{17bp}%
   {\parindent \z@ \centering
-   \csname ucas@title@font\endcsname\heiti\sihao[2.41]
+   \csname bit@title@font\endcsname\heiti\sihao[2.41]
      \def\@tempa{#1}
      \def\@tempb{\eabstractname}
      \ifx\@tempa\@tempb\fi
@@ -1777,35 +1777,35 @@
 %    \end{macrocode}
 % \end{macro}
 %
-% \begin{macro}{\ucas@chapter*}
+% \begin{macro}{\bit@chapter*}
 %
-% \cs{ucas@chapter*}\oarg{tocline}\marg{title}\oarg{header}: tocline 是出现在目录
+% \cs{bit@chapter*}\oarg{tocline}\marg{title}\oarg{header}: tocline 是出现在目录
 % 中的条目，如果为空则此 chapter 不出现在目录中，如果省略表示目录出现 title；
 % title 是章标题；header 是页眉出现的标题，如果忽略则取 title。通过这个宏我才真
 % 正体会到 \TeX{} macro 的力量！
 %    \begin{macrocode}
-\newcounter{ucas@bookmark}
-\def\ucas@chapter*{%
+\newcounter{bit@bookmark}
+\def\bit@chapter*{%
   \@ifnextchar [ % ]
-    {\ucas@@chapter}
-    {\ucas@@chapter@}}
-\def\ucas@@chapter@#1{\ucas@@chapter[#1]{#1}}
-\def\ucas@@chapter[#1]#2{%
+    {\bit@@chapter}
+    {\bit@@chapter@}}
+\def\bit@@chapter@#1{\bit@@chapter[#1]{#1}}
+\def\bit@@chapter[#1]#2{%
   \@ifnextchar [ % ]
-    {\ucas@@@chapter[#1]{#2}}
-    {\ucas@@@chapter[#1]{#2}[]}}
-\def\ucas@@@chapter[#1]#2[#3]{%
+    {\bit@@@chapter[#1]{#2}}
+    {\bit@@@chapter[#1]{#2}[]}}
+\def\bit@@@chapter[#1]#2[#3]{%
   \cleardoublepage
   \phantomsection
   \def\@tmpa{#1}
   \def\@tmpb{#3}
   \ifx\@tmpa\@empty
     \ifx\@tmpb\@empty
-      \addtocounter{ucas@bookmark}\@ne
-      \pdfbookmark[0]{#2}{ucaschapter.\theucas@bookmark}
+      \addtocounter{bit@bookmark}\@ne
+      \pdfbookmark[0]{#2}{bitchapter.\thebit@bookmark}
     \else
-      \addtocounter{ucas@bookmark}\@ne
-      \pdfbookmark[0]{#3}{ucaschapter.\theucas@bookmark}
+      \addtocounter{bit@bookmark}\@ne
+      \pdfbookmark[0]{#3}{bitchapter.\thebit@bookmark}
     \fi
   \else
     \addcontentsline{toc}{chapter}{#1}
@@ -1827,7 +1827,7 @@
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                      {-8bp\@plus -1ex \@minus -.2ex}%
                      {8bp \@plus .2ex}%
-                     {\csname ucas@title@font\endcsname\heiti\xiaosi[1.75]}}
+                     {\csname bit@title@font\endcsname\heiti\xiaosi[1.75]}}
 %    \end{macrocode}
 % \end{macro}
 %
@@ -1837,7 +1837,7 @@
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                         {-4bp\@plus -1ex \@minus -.2ex}%
                         {4bp \@plus .2ex}%
-                        {\csname ucas@title@font\endcsname\heiti\xiaosi[1.75]}}
+                        {\csname bit@title@font\endcsname\heiti\xiaosi[1.75]}}
 %    \end{macrocode}
 % \end{macro}
 %
@@ -1848,7 +1848,7 @@
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                            {-4bp\@plus -1ex \@minus -.2ex}%
                            {4bp \@plus .2ex}%
-                           {\csname ucas@title@font\endcsname\heiti\xiaosi[1.75]}}
+                           {\csname bit@title@font\endcsname\heiti\xiaosi[1.75]}}
 %</cls>
 %    \end{macrocode}
 % \end{macro}
@@ -1873,10 +1873,10 @@
 %    \begin{macrocode}
 \renewcommand\tableofcontents{%
   \cleardoublepage
-  \ucas@chapter*{\contentsname}[\scontentsname]
+  \bit@chapter*{\contentsname}[\scontentsname]
   \xiaosi[1.5]\@starttoc{toc}\normalsize}
-\ifucas@arialtoc
-  \def\ucas@toc@font{\sffamily}
+\ifbit@arialtoc
+  \def\bit@toc@font{\sffamily}
 \fi
 \def\@pnumwidth{2em} % 这个参数没用了
 \def\@tocrmarg{2em}
@@ -1890,7 +1890,7 @@
     \leavevmode
     \@tempdima #3\relax
     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-    {\csname ucas@toc@font\endcsname #4}\nobreak
+    {\csname bit@toc@font\endcsname #4}\nobreak
     \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
     \nobreak{\normalfont \normalcolor #5}%
     \par\penalty\@highpenalty}%
@@ -1906,7 +1906,7 @@
       \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-      {\csname ucas@toc@font\endcsname\heiti\xiaosi #1} % numberline is called here, and it uses \@tempdima
+      {\csname bit@toc@font\endcsname\heiti\xiaosi #1} % numberline is called here, and it uses \@tempdima
       \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
       \nobreak{\normalcolor #2}\par
       \penalty\@highpenalty
@@ -1922,13 +1922,13 @@
 %
 % \subsubsection{封面和封底}
 % \label{sec:cover}
-% \begin{macro}{\ucas@define@term}
+% \begin{macro}{\bit@define@term}
 % 方便的定义封面的一些替换命令。
 %    \begin{macrocode}
 %<*cls>
-\def\ucas@define@term#1{
+\def\bit@define@term#1{
   \expandafter\gdef\csname #1\endcsname##1{%
-    \expandafter\gdef\csname ucas@#1\endcsname{##1}}
+    \expandafter\gdef\csname bit@#1\endcsname{##1}}
   \csname #1\endcsname{}}
 %    \end{macrocode}
 % \end{macro}
@@ -1964,38 +1964,38 @@
 % \begin{macro}{\ecosupervisor}
 % \begin{macro}{\edate}
 %    \begin{macrocode}
-\ucas@define@term{catalognumber}
-\ucas@define@term{udc}
-\ucas@define@term{id}
-\ucas@define@term{secretcontent}
-\ucas@define@term{ctitle}
-\ucas@define@term{cdegree}
-\newcommand\cdepartment[2][]{\def\ucas@cdepartment@short{#1}\def\ucas@cdepartment{#2}}
+\bit@define@term{catalognumber}
+\bit@define@term{udc}
+\bit@define@term{id}
+\bit@define@term{secretcontent}
+\bit@define@term{ctitle}
+\bit@define@term{cdegree}
+\newcommand\cdepartment[2][]{\def\bit@cdepartment@short{#1}\def\bit@cdepartment{#2}}
 \def\caffil{\cdepartment} % todo: for compatibility
-\def\ucas@cdepartment@short{}
-\def\ucas@cdepartment{}
-\ucas@define@term{cmajor}
+\def\bit@cdepartment@short{}
+\def\bit@cdepartment{}
+\bit@define@term{cmajor}
 \def\csubject{\cmajor} % todo: for compatibility
-\ucas@define@term{cfirstdiscipline}
-\ucas@define@term{cseconddiscipline}
-\ucas@define@term{cauthor}
-\ucas@define@term{csupervisor}
-\ucas@define@term{csupervisorplace}
-\ucas@define@term{cassosupervisor}
-\ucas@define@term{ccosupervisor}
+\bit@define@term{cfirstdiscipline}
+\bit@define@term{cseconddiscipline}
+\bit@define@term{cauthor}
+\bit@define@term{csupervisor}
+\bit@define@term{csupervisorplace}
+\bit@define@term{cassosupervisor}
+\bit@define@term{ccosupervisor}
 
-\ucas@define@term{cdate}
-\ucas@define@term{etitle}
-\ucas@define@term{edegree}
-\ucas@define@term{edepartment}
+\bit@define@term{cdate}
+\bit@define@term{etitle}
+\bit@define@term{edegree}
+\bit@define@term{edepartment}
 \def\eaffil{\edepartment} % todo: for compability
 
 
-\ucas@define@term{eauthor}
-\ucas@define@term{emajor}
-\ucas@define@term{esupervisor}
-\ucas@define@term{edepartmnent}
-\ucas@define@term{edate}
+\bit@define@term{eauthor}
+\bit@define@term{emajor}
+\bit@define@term{esupervisor}
+\bit@define@term{edepartmnent}
+\bit@define@term{edate}
 %    \end{macrocode}
 % \end{macro}
 % \end{macro}
@@ -2048,36 +2048,36 @@
 %
 % 使用 \cs{collect@body} 来构建摘要环境。
 %    \begin{macrocode}
-\newcommand{\ucas@@cabstract}[1]{\long\gdef\ucas@cabstract{#1}}
-\newenvironment{cabstract}{\collect@body\ucas@@cabstract}{}
-\newcommand{\ucas@@eabstract}[1]{\long\gdef\ucas@eabstract{#1}}
-\newenvironment{eabstract}{\collect@body\ucas@@eabstract}{}
+\newcommand{\bit@@cabstract}[1]{\long\gdef\bit@cabstract{#1}}
+\newenvironment{cabstract}{\collect@body\bit@@cabstract}{}
+\newcommand{\bit@@eabstract}[1]{\long\gdef\bit@eabstract{#1}}
+\newenvironment{eabstract}{\collect@body\bit@@eabstract}{}
 %    \end{macrocode}
 % \end{environment}
 % \end{environment}
 %
-% \begin{macro}{\ucas@parse@keywords}
+% \begin{macro}{\bit@parse@keywords}
 %   不同论文格式关键词之间的分割不太相同，我们用 \cs{ckeywords} 和
 %    \cs{ekeywords} 来收集关键词列表，然后用本命令来生成符合要求的格式。
 %   \cs{expandafter} 都快把我整晕了。
 %    \begin{macrocode}
-\def\ucas@parse@keywords#1{
-  \expandafter\gdef\csname ucas@#1\endcsname{} % todo: need or not?
+\def\bit@parse@keywords#1{
+  \expandafter\gdef\csname bit@#1\endcsname{} % todo: need or not?
   \expandafter\gdef\csname #1\endcsname##1{
     \@for\reserved@a:=##1\do{
-      \expandafter\ifx\csname ucas@#1\endcsname\@empty\else
-        \expandafter\g@addto@macro\csname ucas@#1\endcsname{\ignorespaces\csname ucas@#1@separator\endcsname}
+      \expandafter\ifx\csname bit@#1\endcsname\@empty\else
+        \expandafter\g@addto@macro\csname bit@#1\endcsname{\ignorespaces\csname bit@#1@separator\endcsname}
       \fi
       \expandafter\expandafter\expandafter\g@addto@macro%
-        \expandafter\csname ucas@#1\expandafter\endcsname\expandafter{\reserved@a}}}}
+        \expandafter\csname bit@#1\expandafter\endcsname\expandafter{\reserved@a}}}}
 %    \end{macrocode}
 % \end{macro}
 % \begin{macro}{\ckeywords}
 % \begin{macro}{\ekeywords}
-% 利用 \cs{ucas@parse@keywords} 来定义，内部通过 \cs{ucas@ckeywords} 来引用。
+% 利用 \cs{bit@parse@keywords} 来定义，内部通过 \cs{bit@ckeywords} 来引用。
 %    \begin{macrocode}
-\ucas@parse@keywords{ckeywords}
-\ucas@parse@keywords{ekeywords}
+\bit@parse@keywords{ckeywords}
+\bit@parse@keywords{ekeywords}
 %</cls>
 %    \end{macrocode}
 % \end{macro}
@@ -2085,50 +2085,50 @@
 %
 %    \begin{macrocode}
 %<*cfg>
-\def\ucas@ckeywords@separator{；}
-\def\ucas@ekeywords@separator{;}
-\def\ucas@catalog@number@title{分类号}
-\def\ucas@id@title{编号}
-\def\ucas@title@sep{：}
-\def\ucas@secretcontent{秘密}
-\def\ucas@schoolname{中国科学院大学}
+\def\bit@ckeywords@separator{；}
+\def\bit@ekeywords@separator{;}
+\def\bit@catalog@number@title{分类号}
+\def\bit@id@title{编号}
+\def\bit@title@sep{：}
+\def\bit@secretcontent{秘密}
+\def\bit@schoolname{中国科学院大学}
 
 
 
-\def\ucas@author@title{作者姓名}
-\ifucas@doctor
-  \def\ucas@apply{博士学位论文}
-  \newcommand{\headingtitle}{中国科学院博士学位论文 ── \ucas@ctitle}
+\def\bit@author@title{作者姓名}
+\ifbit@doctor
+  \def\bit@apply{博士学位论文}
+  \newcommand{\headingtitle}{中国科学院博士学位论文 ── \bit@ctitle}
 \else
-  \def\ucas@apply{硕士学位论文}
-  \newcommand{\headingtitle}{中国科学院硕士学位论文 ── \ucas@ctitle}
+  \def\bit@apply{硕士学位论文}
+  \newcommand{\headingtitle}{中国科学院硕士学位论文 ── \bit@ctitle}
 \fi
 
 
-\def\ucas@department@title{研\hspace{\fill}究\hspace{\fill}所}
-\def\ucas@major@title{学科专业}
-\def\ucas@degree@title{学位类别}
-\def\ucas@supervisor@title{指导教师}
-\def\ucas@assosuper@title{副指导教师}
+\def\bit@department@title{研\hspace{\fill}究\hspace{\fill}所}
+\def\bit@major@title{学科专业}
+\def\bit@degree@title{学位类别}
+\def\bit@supervisor@title{指导教师}
+\def\bit@assosuper@title{副指导教师}
 
-\def\ucas@cosuper@title{%
-  \ifucas@doctor 联合导师\else \ifucas@master 联合指导教师\fi\fi}
+\def\bit@cosuper@title{%
+  \ifbit@doctor 联合导师\else \ifbit@master 联合指导教师\fi\fi}
 \cdate{\CJK@todaybig@short}
 \edate{\ifcase \month \or January\or February\or March\or April\or May%
        \or June\or July \or August\or September\or October\or November
        \or December\fi\unskip,\ \ \the\year}
-\newcommand{\ucas@authtitle}{论文版权使用授权书}
-\newcommand{\ucas@authorization}{%
+\newcommand{\bit@authtitle}{论文版权使用授权书}
+\newcommand{\bit@authorization}{%
 本人授权中国科学院计算技术研究所可以保留并向国家有关部门或机构送交本论文的复印件和电子文档，
 允许本论文被查阅和借阅，可以将本论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩
 印或扫描等复制手段保存、汇编本论文。
 }
-\newcommand{\ucas@authorizationaddon}{%
+\newcommand{\bit@authorizationaddon}{%
 （保密论文在解密后适用本授权书）}
-\newcommand{\ucas@authorsig}{作者签名：}
-\newcommand{\ucas@teachersig}{导师签名：}
-\newcommand{\ucas@frontdate}{日期：}
-\newcommand{\ucas@ckeywords@title}{关键词：}
+\newcommand{\bit@authorsig}{作者签名：}
+\newcommand{\bit@teachersig}{导师签名：}
+\newcommand{\bit@frontdate}{日期：}
+\newcommand{\bit@ckeywords@title}{关键词：}
 %</cfg>
 %    \end{macrocode}
 %
@@ -2137,18 +2137,18 @@
 %
 %    \begin{macrocode}
 %<*cfg>
-\newcommand{\ucas@ackname}{致\hspace{1em}谢}
-\newcommand{\ucas@sackname}{致谢}
-\newcommand{\ucas@declarename}{声\hspace{3em}明}
-\newcommand{\ucas@declaretext}{我声明本论文是我本人在导师指导下进行的研究工作及取得的研究
+\newcommand{\bit@ackname}{致\hspace{1em}谢}
+\newcommand{\bit@sackname}{致谢}
+\newcommand{\bit@declarename}{声\hspace{3em}明}
+\newcommand{\bit@declaretext}{我声明本论文是我本人在导师指导下进行的研究工作及取得的研究
 成果。尽我所知，除了文中特别加以标注和致谢的地方外，本论文中不包含其他人已经发表或撰写过的
 研究成果。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示了谢意。}
-\newcommand{\ucas@signature}{作者签名：}
-\newcommand{\ucas@backdate}{日期：}
+\newcommand{\bit@signature}{作者签名：}
+\newcommand{\bit@backdate}{日期：}
 %</cfg>
 %    \end{macrocode}
 %
-% \begin{macro}{\ucas@first@titlepage}
+% \begin{macro}{\bit@first@titlepage}
 % 论文封面第一页！
 %
 % 题名使用一号黑体字，一行写不下时可分两行写，并采用 1.25 倍行距。
@@ -2158,27 +2158,27 @@
 %
 %    \begin{macrocode}
 %<*cls>
-\newcommand\ucas@underline[2][6em]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
-\newlength{\ucas@title@width}
-\def\ucas@put@title#1{\makebox[\ucas@title@width][s]{#1}}
-\def\ucas@first@titlepage{%
-  \ucas@first@titlepage@other}
+\newcommand\bit@underline[2][6em]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\newlength{\bit@title@width}
+\def\bit@put@title#1{\makebox[\bit@title@width][s]{#1}}
+\def\bit@first@titlepage{%
+  \bit@first@titlepage@other}
 \newcommand*{\getcmlength}[1]{\strip@pt\dimexpr0.035146\dimexpr#1\relax\relax}
-\newcommand{\ucas@first@titlepage@other}{
+\newcommand{\bit@first@titlepage@other}{
   \begin{center}
     \vspace*{0cm}
     \parbox[t][1cm][t]{\textwidth}{%
-      \ifucas@secret\hspace{25em}{\sihao[1]\songti 密级：\underline{\makebox[6em]{\ucas@secretcontent}}}\fi}
+      \ifbit@secret\hspace{25em}{\sihao[1]\songti 密级：\underline{\makebox[6em]{\bit@secretcontent}}}\fi}
       \begin{figure}[H]
         \centering
-        \includegraphics[width=128mm,height=21.7mm]{ucaslogo}
+        \includegraphics[width=128mm,height=21.7mm]{bitlogo}
       \end{figure}
       \parbox[t][8cm][t]{\paperwidth-8cm}{
       \renewcommand{\baselinestretch}{1.3}
       \begin{center}    
-      \yihao\heiti\ucas@apply
+      \yihao\heiti\bit@apply
       \par\vskip 40bp
-      \sanhao\heiti\ucas@ctitle
+      \sanhao\heiti\bit@ctitle
       \end{center}}
 %    \end{macrocode}
 %
@@ -2188,21 +2188,21 @@
 
 \parbox[t][9cm][t]{\textwidth}{{\sihao\songti
 \begin{center}
-\setlength{\ucas@title@width}{4em}
+\setlength{\bit@title@width}{4em}
 \setlength{\extrarowheight}{2.5ex}
 \begin{tabular}{ll}
 
-\ucas@author@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cauthor}}\\
+\bit@author@title\bit@title@sep     &\underline{\makebox[25em]{\bit@cauthor}}\\
 
-\ucas@supervisor@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@csupervisor}}\\
+\bit@supervisor@title\bit@title@sep     &\underline{\makebox[25em]{\bit@csupervisor}}\\
 
-&\underline{\makebox[25em]{\ucas@csupervisorplace}}\\
+&\underline{\makebox[25em]{\bit@csupervisorplace}}\\
 
-\ucas@degree@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cdegree}}\\
+\bit@degree@title\bit@title@sep     &\underline{\makebox[25em]{\bit@cdegree}}\\
 
-\ucas@major@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cmajor}}\\
+\bit@major@title\bit@title@sep     &\underline{\makebox[25em]{\bit@cmajor}}\\
 
-\ucas@put@title{\ucas@department@title}\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cdepartment}}\\
+\bit@put@title{\bit@department@title}\bit@title@sep     &\underline{\makebox[25em]{\bit@cdepartment}}\\
 
 \end{tabular}
 \end{center}}}
@@ -2211,78 +2211,78 @@
 % 论文成文打印的日期，用三号宋体汉字，不用阿拉伯数字
 %    \begin{macrocode}
   \begin{center}
-    {\vskip 3ex\sihao \songti \ucas@cdate}
+    {\vskip 3ex\sihao \songti \bit@cdate}
   \end{center}
 \end{center}} % end of titlepage
 %    \end{macrocode}
 % \end{macro}
 %
-% \begin{macro}{\ucas@doctor@engcover}
+% \begin{macro}{\bit@doctor@engcover}
 % 研究生论文英文封面部分。
 %    \begin{macrocode}
-\newcommand{\ucas@engcover}{%
-  \def\ucas@master@art{Master of Arts}
-  \def\ucas@master@sci{Master of Science}
-  \def\ucas@doctor@phi{Doctor of Philosophy}
-  \newif\ifucas@professional
-  \ucas@professionalfalse
+\newcommand{\bit@engcover}{%
+  \def\bit@master@art{Master of Arts}
+  \def\bit@master@sci{Master of Science}
+  \def\bit@doctor@phi{Doctor of Philosophy}
+  \newif\ifbit@professional
+  \bit@professionalfalse
 
   \begin{center}
     \vspace*{0.2cm}
     \parbox[t][3.2cm][t]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.5}
       \begin{center}
-        \sanhao\sffamily\ucas@etitle
+        \sanhao\sffamily\bit@etitle
       \end{center}}
     \parbox[t][7cm][c]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.3}
       \begin{center}
         \sanhao\rmfamily by\\[3bp]
-        \rmfamily\ucas@eauthor
+        \rmfamily\bit@eauthor
       \end{center}}
 
     \parbox[t][8cm][t]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.3}
       \begin{center}
         \sihao
-        \rmfamily A \ifucas@master Thesis \else Dissertation \fi
+        \rmfamily A \ifbit@master Thesis \else Dissertation \fi
         Submitted to\\
         {\rmfamily University of Chinese Academy of Sciences}\\
         \rmfamily in Partial Fulfillment of the Requirement\\
         \rmfamily for the Degree of\\
-        {\rmfamily\ucas@edegree}
+        {\rmfamily\bit@edegree}
 
       \end{center}}
 
     \par\vspace{0.9cm}
     \parbox[t][2cm][b]{\paperwidth-7.2cm}{
     \begin{center}
-      \sihao\rmfamily\ucas@edepartment\par\vspace*{1ex}
-      \sihao\rmfamily\ucas@edate
+      \sihao\rmfamily\bit@edepartment\par\vspace*{1ex}
+      \sihao\rmfamily\bit@edate
     \end{center}}
   \end{center}}
 %    \end{macrocode}
 % \end{macro}
-% \begin{macro}{\ucas@authorization@mk}
+% \begin{macro}{\bit@authorization@mk}
 % 封面中论文授权部分。
 %    \begin{macrocode}
-\newcommand{\ucas@declare@mk}{%
-\begin{center}\sanhao\heiti{\ucas@declarename}\end{center}
+\newcommand{\bit@declare@mk}{%
+\begin{center}\sanhao\heiti{\bit@declarename}\end{center}
   \vskip40pt\sihao[2.03]\par
-  \ucas@declaretext\par
+  \bit@declaretext\par
   \vskip1.5cm
   \sihao
-  \hspace{11em}\ucas@signature\hspace{6em}\ucas@backdate
+  \hspace{11em}\bit@signature\hspace{6em}\bit@backdate
 }
-\newcommand{\ucas@authorization@mk}{%
+\newcommand{\bit@authorization@mk}{%
   \vspace*{0.72cm} % shit code!
-  \begin{center}\sanhao\heiti{\ucas@authtitle}\end{center}
+  \begin{center}\sanhao\heiti{\bit@authtitle}\end{center}
   \vskip40pt\sihao[2.03]\par
-  \ucas@authorization\par
-  \ucas@authorizationaddon\par
+  \bit@authorization\par
+  \bit@authorizationaddon\par
   \vskip1.5cm
   \sihao
-  \ucas@authorsig\hspace{6em}\ucas@teachersig\hspace{6em}\ucas@frontdate
+  \bit@authorsig\hspace{6em}\bit@teachersig\hspace{6em}\bit@frontdate
   }
 %    \end{macrocode}
 % \end{macro}
@@ -2292,21 +2292,21 @@
 %    \begin{macrocode}
 \newcommand{\makecover}{
   \phantomsection
-  \pdfbookmark[-1]{\ucas@ctitle}{ctitle}
+  \pdfbookmark[-1]{\bit@ctitle}{ctitle}
   \normalsize%
   \begin{titlepage}
 %    \end{macrocode}
 %
 % 论文封面第一页！
 %    \begin{macrocode}
-    \ucas@first@titlepage
+    \bit@first@titlepage
 %    \end{macrocode}
 %
 %
 % 研究生论文需要增加英文封面
 %    \begin{macrocode}
 \cleardoublepage
-\clearpage\ucas@engcover
+\clearpage\bit@engcover
 
 %    \end{macrocode}
 %
@@ -2320,8 +2320,8 @@
         \setlength{\itemsep}{5cm}
         \setlength{\leftmargin}{0.9mm}%
         \setlength{\rightmargin}{0.9mm}}%
-      \item[]\ucas@declare@mk
-      \item[]\ucas@authorization@mk%
+      \item[]\bit@declare@mk
+      \item[]\bit@authorization@mk%
       \end{list}%
   \end{titlepage}
 %    \end{macrocode}
@@ -2330,8 +2330,8 @@
 % 中英文摘要
 %    \begin{macrocode}
   \normalsize
-  \ucas@makeabstract
-  \let\@tabular\ucas@tabular}
+  \bit@makeabstract
+  \let\@tabular\bit@tabular}
 %</cls>
 %    \end{macrocode}
 % \end{macro}
@@ -2339,28 +2339,28 @@
 % \subsubsection{摘要格式}
 % \label{sec:abstractformat}
 %
-% \begin{macro}{\ucas@makeabstract}
+% \begin{macro}{\bit@makeabstract}
 % 中文摘要部分的标题为\textbf{摘要}，用黑体三号字。
 %    \begin{macrocode}
 %<*cls>
-\newcommand{\ucas@makeabstract}{%
+\newcommand{\bit@makeabstract}{%
   \cleardoublepage
-  \ucas@chapter*{\cabstractname}[\csabstractname] % no tocline
-  \pagestyle{ucas@plain}
+  \bit@chapter*{\cabstractname}[\csabstractname] % no tocline
+  \pagestyle{bit@plain}
   \pagenumbering{Roman}
 %    \end{macrocode}
 %
 % 摘要内容用小四号字书写，两端对齐，汉字用宋体，外文字用 Times New Roman 体，
 % 标点符号一律用中文输入状态下的标点符号。
 %    \begin{macrocode}
-  \ucas@cabstract
+  \bit@cabstract
 %    \end{macrocode}
 % 每个关键词之间空两个汉字符宽度， 且为悬挂缩进
 %    \begin{macrocode}
   \vskip12bp
-  \setbox0=\hbox{{\heiti\ucas@ckeywords@title}}
+  \setbox0=\hbox{{\heiti\bit@ckeywords@title}}
   \noindent\hangindent\wd0\hangafter1
-    \box0\ucas@ckeywords
+    \box0\bit@ckeywords
 %    \end{macrocode}
 %
 % 英文摘要部分的标题为 \textbf{Abstract}，用 Arial 体三号字。研究生的英文摘要要求
@@ -2368,16 +2368,16 @@
 % 续。
 %    \begin{macrocode}
   \cleardoublepage
-  \ucas@chapter*[]{\ucas@etitle}[\eabstractname] % no tocline
+  \bit@chapter*[]{\bit@etitle}[\eabstractname] % no tocline
 %    \end{macrocode}
 %
 % 摘要内容用小四号 Times New Roman。
 %    \begin{macrocode}
   \begin{center}
-  \ucas@eauthor\hspace{1ex}(\ucas@emajor)\\
-  Directed by \ucas@esupervisor\\
+  \bit@eauthor\hspace{1ex}(\bit@emajor)\\
+  Directed by \bit@esupervisor\\
   \end{center}
-  \hspace{2em}\ucas@eabstract
+  \hspace{2em}\bit@eabstract
 %    \end{macrocode}
 %
 % 每个关键词之间空四个英文字符宽度
@@ -2385,7 +2385,7 @@
   \vskip12bp
   \setbox0=\hbox{\textbf{Keywords:\enskip}}
   \noindent
-    \box0\ucas@ekeywords}
+    \box0\bit@ekeywords}
 %</cls>
 %    \end{macrocode}
 % \end{macro}
@@ -2396,11 +2396,11 @@
 % 主要符号对照表
 %    \begin{macrocode}
 %<*cfg>
-\newcommand{\ucas@denotation@name}{主要符号对照表}
+\newcommand{\bit@denotation@name}{主要符号对照表}
 %</cfg>
 %<*cls>
 \newenvironment{denotation}[1][2.5cm]{
-  \ucas@chapter*[]{\ucas@denotation@name} % no tocline
+  \bit@chapter*[]{\bit@denotation@name} % no tocline
   \noindent\begin{list}{}%
     {\vskip-30bp\xiaosi[1.6]
      \renewcommand\makelabel[1]{##1\hfil}
@@ -2426,7 +2426,7 @@
 
 \newenvironment{ack}{%
     \cleardoublepage
-    \ucas@chapter*{\ucas@ackname}[\ucas@sackname]
+    \bit@chapter*{\bit@ackname}[\bit@sackname]
   }
 
 %</cls>
@@ -2441,19 +2441,19 @@
 % \begin{macro}{\listoftables*}
 %    \begin{macrocode}
 %<*cls>
-\def\ucas@starttoc#1{% #1: float type, prepend type name in \listof*** entry.
+\def\bit@starttoc#1{% #1: float type, prepend type name in \listof*** entry.
   \let\oldnumberline\numberline
   \def\numberline##1{\oldnumberline{\csname #1name\endcsname \hskip.4em ##1}}
   \@starttoc{\csname ext@#1\endcsname}
   \let\numberline\oldnumberline}
-\def\ucas@listof#1{% #1: float type
+\def\bit@listof#1{% #1: float type
   \cleardoublepage
   \@ifstar
-    {\ucas@chapter*[]{\csname list#1name\endcsname}\ucas@starttoc{#1}}
-    {\ucas@chapter*{\csname list#1name\endcsname}\ucas@starttoc{#1}}}
-\renewcommand\listoffigures{\ucas@listof{figure}}
+    {\bit@chapter*[]{\csname list#1name\endcsname}\bit@starttoc{#1}}
+    {\bit@chapter*{\csname list#1name\endcsname}\bit@starttoc{#1}}}
+\renewcommand\listoffigures{\bit@listof{figure}}
 \renewcommand*\l@figure{\vspace*{1ex}\@dottedtocline{1}{0em}{4em}}
-\renewcommand\listoftables{\ucas@listof{table}}
+\renewcommand\listoftables{\bit@listof{table}}
 \let\l@table\l@figure
 %    \end{macrocode}
 % \end{macro}
@@ -2484,7 +2484,7 @@
 % \begin{macro}{\listofequations*}
 % \LaTeX{}默认没有公式索引，此处定义自己的 \cs{listofequations}。
 %    \begin{macrocode}
-\newcommand\listofequations{\ucas@listof{equation}}
+\newcommand\listofequations{\bit@listof{equation}}
 \let\l@equation\l@figure
 %</cls>
 %    \end{macrocode}
@@ -2512,14 +2512,14 @@
 % 参考文献的正文部分用五号字。
 % 行距采用固定值 16 磅，段前空 3 磅，段后空 0 磅。
 %
-% \begin{macro}{\ucasdot}
+% \begin{macro}{\bitdot}
 % 研究生参考文献条目最后可加点，图书文献一般不加。
 %    \begin{macrocode}
-\def\ucasdot{\unskip.}
+\def\bitdot{\unskip.}
 %    \end{macrocode}
 % \end{macro}
-% \begin{macro}{ucasmasterbib}
-% \begin{macro}{ucasphdbib}
+% \begin{macro}{bitmasterbib}
+% \begin{macro}{bitphdbib}
 %   研究生模板要求外文硕士论文参考文献显示``[Master Thesis]''，而博士模板
 %   则于 2007 年冬要求显示为``[M]''。对应的外文博士论文参考文献分别显示为``[Phd
 %   Thesis]''和``[D]''。
@@ -2527,8 +2527,8 @@
 %   中文硕士学位论文标注``[硕士学位论文]''，
 %   中文博士学位论文标注``[博士学位论文]''，外文学位论文标注``[D]''。
 %    \begin{macrocode}
-\def\ucasmasterbib{[硕士学位论文]}
-\def\ucasphdbib{[博士学位论文]}
+\def\bitmasterbib{[硕士学位论文]}
+\def\bitphdbib{[博士学位论文]}
 %    \end{macrocode}
 % \end{macro}
 % \end{macro}
@@ -2536,7 +2536,7 @@
 % 修改默认的 thebibliography 环境，增加一些调整代码。
 %    \begin{macrocode}
 \renewenvironment{thebibliography}[1]{%
-   \ucas@chapter*{\bibname}%
+   \bit@chapter*{\bibname}%
    \wuhao[1.5]
    \list{\@biblabel{\@arabic\c@enumiv}}%
         {\renewcommand{\makelabel}[1]{##1\hfill}
@@ -2568,9 +2568,9 @@
 % \begin{environment}{appendix}
 %    \begin{macrocode}
 %<*cls>
-\let\ucas@appendix\appendix
+\let\bit@appendix\appendix
 \renewenvironment{appendix}{%
-  \ucas@appendix
+  \bit@appendix
   \gdef\@chapapp{\appendixname~\thechapter}
   %\renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter-\fi\@arabic\c@equation}
   }{}
@@ -2585,9 +2585,9 @@
 % 个人简历发表文章等。
 %    \begin{macrocode}
 %<*cls>
-\newenvironment{resume}[1][\ucas@resume@title]{%
+\newenvironment{resume}[1][\bit@resume@title]{%
   \cleardoublepage
-  \ucas@chapter*{#1}}{}
+  \bit@chapter*{#1}}{}
 %</cls>
 %    \end{macrocode}
 % \end{environment}
@@ -2596,7 +2596,7 @@
 % 个人简历里面会出现的以发表文章，在投文章等。
 %    \begin{macrocode}
 %<*cfg>
-\newcommand{\ucas@resume@title}{作者简介}
+\newcommand{\bit@resume@title}{作者简介}
 
 %</cfg>
 %<*cls>
@@ -2611,9 +2611,9 @@
 % 单独使用书脊命令会在新的一页产生竖排书脊。
 %    \begin{macrocode}
 %<*cls>
-\newcommand{\spine}[1][\ucas@ctitle]{
+\newcommand{\spine}[1][\bit@ctitle]{
   \newpage\thispagestyle{empty}\heiti\xiaosi
-  \parbox[t][23cm][t]{1em}{#1\vfill\ucas@cauthor\vfill 中国科学院大学}}
+  \parbox[t][23cm][t]{1em}{#1\vfill\bit@cauthor\vfill 中国科学院大学}}
 %</cls>
 %    \end{macrocode}
 % \end{macro}
@@ -2658,26 +2658,26 @@
 % 必须在 document 开始后才能，感觉不好。
 %    \begin{macrocode}
 %<*cls>
-\AtEndOfClass{\input{ucasthesis.cfg}}
+\AtEndOfClass{\input{bitthesis.cfg}}
 %    \end{macrocode}
 %
-% \begin{macro}{\ucas@setup@pdfinfo}
+% \begin{macro}{\bit@setup@pdfinfo}
 % 设置一些 pdf 文档信息，依赖于 \pkg{hyperref} 宏包。
 %    \begin{macrocode}
-\def\ucas@setup@pdfinfo{%
+\def\bit@setup@pdfinfo{%
   \hypersetup{%
-    pdftitle={\ucas@ctitle},
-    pdfauthor={\ucas@cauthor},
-    pdfsubject={\ucas@cdegree},
-    pdfkeywords={\ucas@ckeywords},
-    pdfcreator={\ucas@cauthor},
-    pdfproducer={\ucasthesis}}}
+    pdftitle={\bit@ctitle},
+    pdfauthor={\bit@cauthor},
+    pdfsubject={\bit@cdegree},
+    pdfkeywords={\bit@ckeywords},
+    pdfcreator={\bit@cauthor},
+    pdfproducer={\bitthesis}}}
 %    \end{macrocode}
 % \end{macro}
 %
 % 应用对列表环境的修改。
 %    \begin{macrocode}
-\AtEndOfClass{\sloppy\ucas@item@space}
+\AtEndOfClass{\sloppy\bit@item@space}
 %</cls>
 %    \end{macrocode}
 %

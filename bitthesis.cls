@@ -1,10 +1,10 @@
 %%
-%% This is file `ucasthesis.cls',
+%% This is file `bitthesis.cls',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
-%% ucasthesis.dtx  (with options: `cls')
+%% bitthesis.dtx  (with options: `cls')
 %% 
 %% This is a generated file.
 %% 
@@ -26,25 +26,25 @@
 %% 
 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesClass{ucasthesis}
+\ProvidesClass{bitthesis}
 [2012/07/28 4.8dev University of Chinese Academy of Sciences Thesis Template]
-\hyphenation{ucas-Thesis}
-\def\ucasthesis{\textsc{ucasthesis}}
+\hyphenation{bit-Thesis}
+\def\bitthesis{\textsc{bitthesis}}
 \def\version{4.8dev}
-\newif\ifucas@master\ucas@masterfalse
-\newif\ifucas@doctor\ucas@doctorfalse
-\newif\ifucas@secret\ucas@secretfalse
-\DeclareOption{master}{\ucas@mastertrue}
-\DeclareOption{doctor}{\ucas@doctortrue}
-\DeclareOption{secret}{\ucas@secrettrue}
-\newif\ifucas@arial   %!
-\DeclareOption{arial}{\ucas@arialtrue}
-\newif\ifucas@arialtoc
-\DeclareOption{arialtoc}{\ucas@arialtoctrue}
-\newif\ifucas@arialtitle
-\DeclareOption{arialtitle}{\ucas@arialtitletrue}
-\newif\ifucas@raggedbottom\ucas@raggedbottomtrue
-\DeclareOption{noraggedbottom}{\ucas@raggedbottomfalse}
+\newif\ifbit@master\bit@masterfalse
+\newif\ifbit@doctor\bit@doctorfalse
+\newif\ifbit@secret\bit@secretfalse
+\DeclareOption{master}{\bit@mastertrue}
+\DeclareOption{doctor}{\bit@doctortrue}
+\DeclareOption{secret}{\bit@secrettrue}
+\newif\ifbit@arial   %!
+\DeclareOption{arial}{\bit@arialtrue}
+\newif\ifbit@arialtoc
+\DeclareOption{arialtoc}{\bit@arialtoctrue}
+\newif\ifbit@arialtitle
+\DeclareOption{arialtitle}{\bit@arialtitletrue}
+\newif\ifbit@raggedbottom\bit@raggedbottomtrue
+\DeclareOption{noraggedbottom}{\bit@raggedbottomfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 \ExecuteOptions{utf,arialtitle}%?
 \ProcessOptions\relax
@@ -55,9 +55,9 @@
   \LoadClass[cs4size,a4paper,openany,nocap,winfonts,UTF8]{ctexbook}
 \fi%    \end{macrocode}
 
-\ifucas@master\relax\else
-  \ifucas@doctor\relax\else
-      \ClassError{ucasthesis}%
+\ifbit@master\relax\else
+  \ifbit@doctor\relax\else
+      \ClassError{bitthesis}%
                    {You have to specify one of thesis options: master or doctor.}{}
   \fi
 \fi
@@ -71,7 +71,7 @@
 
 \RequirePackage[neverdecrease]{paralist}
 \setdefaultleftmargin{3em}{2.2em}{1.87em}{1.7em}{1em}{1em}
-\ifucas@raggedbottom
+\ifbit@raggedbottom
   \RequirePackage[bottom,perpage]{footmisc}
   \raggedbottom
 \else
@@ -97,10 +97,10 @@
   \setmonofont{Courier New}
 \else
   \RequirePackage{CJKspace}
-  \ifucas@arial
+  \ifbit@arial
     \IfFileExists{arial.sty}%
                  {\RequirePackage{arial}}%
-                 {\ClassWarning{ucasthesis}{no arial.sty availiable!}}
+                 {\ClassWarning{bitthesis}{no arial.sty availiable!}}
   \fi
 \fi
 \RequirePackage[amsmath,thmmarks,hyperref]{ntheorem}
@@ -124,18 +124,18 @@
   {\CJKnumber{\getrefnumber{#1}}}}}
 
 \RequirePackage{xcolor}
-\definecolor{ucascitecolor}{rgb}{0.0, 0.50, 0.0}
-\definecolor{ucaslinkcolor}{rgb}{0.75, 0.0, 0.0}
-\definecolor{ucasurlcolor}{rgb}{0.0, 0.0, 0.75}
+\definecolor{bitcitecolor}{rgb}{0.0, 0.50, 0.0}
+\definecolor{bitlinkcolor}{rgb}{0.75, 0.0, 0.0}
+\definecolor{biturlcolor}{rgb}{0.0, 0.0, 0.75}
 \hypersetup{%
   bookmarksnumbered=true,
   bookmarksopen=true,
   bookmarksopenlevel=1,
   breaklinks=true,
   colorlinks=true,
-  citecolor=ucascitecolor,
-  linkcolor=ucaslinkcolor,
-  urlcolor=ucasurlcolor,
+  citecolor=bitcitecolor,
+  linkcolor=bitlinkcolor,
+  urlcolor=biturlcolor,
   plainpages=false,
   pdfpagelabels,
   pdfborder=0 0 0}
@@ -144,43 +144,43 @@
   \cleardoublepage
   \@mainmatterfalse
   \pagenumbering{Roman}
-  \pagestyle{ucas@empty}}
+  \pagestyle{bit@empty}}
 \renewcommand\mainmatter{%
   \cleardoublepage
   \@mainmattertrue
   \pagenumbering{arabic}
-  \pagestyle{ucas@headings}}
-  %#\ifucas@bachelor\pagestyle{ucas@plain}\else\pagestyle{ucas@headings}\fi}
+  \pagestyle{bit@headings}}
+  %#\ifbit@bachelor\pagestyle{bit@plain}\else\pagestyle{bit@headings}\fi}
 \renewcommand\backmatter{%
   \cleardoublepage
   \pagenumbering{roman}
-  \pagestyle{ucas@plain}
+  \pagestyle{bit@plain}
   \@mainmattertrue}
-\newlength\ucas@linespace
-\newcommand{\ucas@choosefont}[2]{%
-   \setlength{\ucas@linespace}{#2*\real{#1}}%
-   \fontsize{#2}{\ucas@linespace}\selectfont}
-\def\ucas@define@fontsize#1#2{%
+\newlength\bit@linespace
+\newcommand{\bit@choosefont}[2]{%
+   \setlength{\bit@linespace}{#2*\real{#1}}%
+   \fontsize{#2}{\bit@linespace}\selectfont}
+\def\bit@define@fontsize#1#2{%
   \expandafter\newcommand\csname #1\endcsname[1][\baselinestretch]{%
-    \ucas@choosefont{##1}{#2}}}
-\ucas@define@fontsize{chuhao}{42bp}
-\ucas@define@fontsize{xiaochu}{36bp}
-\ucas@define@fontsize{yihao}{26bp}
-\ucas@define@fontsize{xiaoyi}{24bp}
-\ucas@define@fontsize{erhao}{22bp}
-\ucas@define@fontsize{xiaoer}{18bp}
-\ucas@define@fontsize{sanhao}{16bp}
-\ucas@define@fontsize{xiaosan}{15bp}
-\ucas@define@fontsize{sihao}{14bp}
-\ucas@define@fontsize{banxiaosi}{13bp}
-\ucas@define@fontsize{xiaosi}{12bp}
-\ucas@define@fontsize{dawu}{11bp}
-\ucas@define@fontsize{wuhao}{10.5bp}
-\ucas@define@fontsize{xiaowu}{9bp}
-\ucas@define@fontsize{liuhao}{7.5bp}
-\ucas@define@fontsize{xiaoliu}{6.5bp}
-\ucas@define@fontsize{qihao}{5.5bp}
-\ucas@define@fontsize{bahao}{5bp}
+    \bit@choosefont{##1}{#2}}}
+\bit@define@fontsize{chuhao}{42bp}
+\bit@define@fontsize{xiaochu}{36bp}
+\bit@define@fontsize{yihao}{26bp}
+\bit@define@fontsize{xiaoyi}{24bp}
+\bit@define@fontsize{erhao}{22bp}
+\bit@define@fontsize{xiaoer}{18bp}
+\bit@define@fontsize{sanhao}{16bp}
+\bit@define@fontsize{xiaosan}{15bp}
+\bit@define@fontsize{sihao}{14bp}
+\bit@define@fontsize{banxiaosi}{13bp}
+\bit@define@fontsize{xiaosi}{12bp}
+\bit@define@fontsize{dawu}{11bp}
+\bit@define@fontsize{wuhao}{10.5bp}
+\bit@define@fontsize{xiaowu}{9bp}
+\bit@define@fontsize{liuhao}{7.5bp}
+\bit@define@fontsize{xiaoliu}{6.5bp}
+\bit@define@fontsize{qihao}{5.5bp}
+\bit@define@fontsize{bahao}{5bp}
 \renewcommand\normalsize{%
   \@setfontsize\normalsize{12bp}{20bp}
   \abovedisplayskip=10bp \@plus 2bp \@minus 2bp
@@ -206,32 +206,32 @@
 \setlength{\headheight}{20pt}
 \setlength{\topskip}{0pt}
 \setlength{\skip\footins}{15pt}
-\let\ucas@cleardoublepage\cleardoublepage
-\newcommand{\ucas@clearemptydoublepage}{%
-  \clearpage{\pagestyle{empty}\ucas@cleardoublepage}}
-\let\cleardoublepage\ucas@clearemptydoublepage
-\def\ps@ucas@empty{%
+\let\bit@cleardoublepage\cleardoublepage
+\newcommand{\bit@clearemptydoublepage}{%
+  \clearpage{\pagestyle{empty}\bit@cleardoublepage}}
+\let\cleardoublepage\bit@clearemptydoublepage
+\def\ps@bit@empty{%
   \let\@oddhead\@empty%
   \let\@evenhead\@empty%
   \let\@oddfoot\@empty%
   \let\@evenfoot\@empty}
-\def\ps@ucas@foot{%
+\def\ps@bit@foot{%
   \let\@oddhead\@empty%
   \let\@evenhead\@empty%
   \def\@oddfoot{\hfil\xiaowu\thepage\hfil}%
   \let\@evenfoot=\@oddfoot}
-\def\ps@ucas@plain{%
+\def\ps@bit@plain{%
   \def\@oddhead{\vbox to\headheight{%
-    \hb@xt@\textwidth{\hfill\xiaowu\songti\ucas@ctitle：\leftmark\hfill}%
+    \hb@xt@\textwidth{\hfill\xiaowu\songti\bit@ctitle：\leftmark\hfill}%
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
   \def\@oddfoot{\hfil\xiaowu\thepage\hfil}%
   \def\@evenhead{\vbox to\headheight{%
       \hb@xt@\textwidth{\xiaowu\songti%
-       \hfill \ucas@ctitle：\leftmark \hfill}%
+       \hfill \bit@ctitle：\leftmark \hfill}%
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
   \def\@oddfoot{\hfil\xiaowu\thepage\hfil}%
   \let\@evenfoot=\@oddfoot}
-\def\ps@ucas@headings{%
+\def\ps@bit@headings{%
   \def\@oddhead{\vbox to\headheight{%
     \hb@xt@\textwidth{\hfill\xiaowu\songti\leftmark\hfill}%
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
@@ -244,29 +244,29 @@
 
 \renewcommand{\chaptermark}[1]{\@mkboth{\@chapapp\  ~~#1}{}}
 \setlength{\parskip}{0pt \@plus2pt \@minus0pt}
-\def\ucas@item@space{%
+\def\bit@item@space{%
   \let\itemize\compactitem
   \let\enditemize\endcompactitem
   \let\enumerate\compactenum
   \let\endenumerate\endcompactenum
   \let\description\compactdesc
   \let\enddescription\endcompactdesc}
-\def\ucas@textcircled#1{%
+\def\bit@textcircled#1{%
   \ifnum \value{#1} <10 \textcircled{\xiaoliu\arabic{#1}}
   \else\ifnum \value{#1} <100 \textcircled{\qihao\arabic{#1}}\fi
   \fi}
-\renewcommand{\thefootnote}{\ucas@textcircled{footnote}}
-\renewcommand{\thempfootnote}{\ucas@textcircled{mpfootnote}}
+\renewcommand{\thefootnote}{\bit@textcircled{footnote}}
+\renewcommand{\thempfootnote}{\bit@textcircled{mpfootnote}}
 \def\footnoterule{\vskip-3\p@\hrule\@width0.3\textwidth\@height0.4\p@\vskip2.6\p@}
-\let\ucas@footnotesize\footnotesize
-\renewcommand\footnotesize{\ucas@footnotesize\xiaowu[1.5]}
+\let\bit@footnotesize\footnotesize
+\renewcommand\footnotesize{\bit@footnotesize\xiaowu[1.5]}
 \def\@makefnmark{\textsuperscript{\hbox{\normalfont\@thefnmark}}}
 \long\def\@makefntext#1{
   \bgroup
-    \newbox\ucas@tempboxa
-    \setbox\ucas@tempboxa\hbox{%
+    \newbox\bit@tempboxa
+    \setbox\bit@tempboxa\hbox{%
       \hb@xt@ 2em{\@thefnmark\hss}}
-    \leftmargin\wd\ucas@tempboxa
+    \leftmargin\wd\bit@tempboxa
     \rightmargin\z@
     \linewidth \columnwidth
     \advance \linewidth -\leftmargin
@@ -274,16 +274,16 @@
     \footnotesize
     \@setpar{{\@@par}}%
     \leavevmode
-    \llap{\box\ucas@tempboxa}%
+    \llap{\box\bit@tempboxa}%
     #1
   \par\egroup}
 \allowdisplaybreaks[4]
 \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter-\fi\@arabic\c@equation}
-\def\make@df@tag{\@ifstar\ucas@make@df@tag@@\make@df@tag@@@}
-\def\ucas@make@df@tag@@#1{\gdef\df@tag{\ucas@maketag{#1}\def\@currentlabel{#1}}}
+\def\make@df@tag{\@ifstar\bit@make@df@tag@@\make@df@tag@@@}
+\def\bit@make@df@tag@@#1{\gdef\df@tag{\bit@maketag{#1}\def\@currentlabel{#1}}}
 \renewcommand{\eqref}[1]{\textup{(\ref{#1})}}
 \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter-\fi\@arabic\c@equation}
-\def\ucas@maketag#1{\maketag@@@{(\ignorespaces #1\unskip\@@italiccorr)}}
+\def\bit@maketag#1{\maketag@@@{(\ignorespaces #1\unskip\@@italiccorr)}}
 \def\tagform@#1{\maketag@@@{(\ignorespaces #1\unskip\@@italiccorr)\equcaption{#1}}}
 \gdef\@endtrivlist#1{%  % from \endtrivlist
   \if@inlabel \indent\fi
@@ -313,27 +313,27 @@
 \renewcommand{\bottomfraction}{0.65}
 \renewcommand{\floatpagefraction}{0.60}
 \let\old@tabular\@tabular
-\def\ucas@tabular{\dawu[1.5]\old@tabular}
-\DeclareCaptionLabelFormat{ucas}{{\dawu[1.5]\songti #1~\rmfamily #2}}
-\DeclareCaptionLabelSeparator{ucas}{\hspace{1em}}
-\DeclareCaptionFont{ucas}{\dawu[1.5]}
-\captionsetup{labelformat=ucas,labelsep=ucas,font=ucas}
+\def\bit@tabular{\dawu[1.5]\old@tabular}
+\DeclareCaptionLabelFormat{bit}{{\dawu[1.5]\songti #1~\rmfamily #2}}
+\DeclareCaptionLabelSeparator{bit}{\hspace{1em}}
+\DeclareCaptionFont{bit}{\dawu[1.5]}
+\captionsetup{labelformat=bit,labelsep=bit,font=bit}
 \captionsetup[table]{position=top,belowskip={12bp-\intextsep},aboveskip=6bp}
 \captionsetup[figure]{position=bottom,belowskip={12bp-\intextsep},aboveskip=6bp}
-\captionsetup[sub]{font=ucas,skip=6bp}
+\captionsetup[sub]{font=bit,skip=6bp}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \renewcommand{\thesubtable}{(\alph{subtable})}
-\let\ucas@LT@array\LT@array
-\def\LT@array{\dawu[1.5]\ucas@LT@array} % set default font size
+\let\bit@LT@array\LT@array
+\def\LT@array{\dawu[1.5]\bit@LT@array} % set default font size
 \def\hlinewd#1{%
   \noalign{\ifnum0=`}\fi\hrule \@height #1 \futurelet
     \reserved@a\@xhline}
-\ifucas@arialtitle
-  \def\ucas@title@font{\sffamily}
+\ifbit@arialtitle
+  \def\bit@title@font{\sffamily}
 \fi
 \renewcommand\chapter{%
   \cleardoublepage%
-  \thispagestyle{ucas@foot}%
+  \thispagestyle{bit@foot}%
   \global\@topnum\z@%
   \@afterindenttrue%
   \secdef\@chapter\@schapter}
@@ -353,7 +353,7 @@
 \def\@makechapterhead#1{%
   \vspace*{17bp}
   {\parindent \z@ \centering
-    \csname ucas@title@font\endcsname\heiti\sihao[2.41]
+    \csname bit@title@font\endcsname\heiti\sihao[2.41]
     \ifnum \c@secnumdepth >\m@ne
       \@chapapp\hskip1em
     \fi
@@ -365,7 +365,7 @@
 \def\@makeschapterhead#1{%
   \vspace*{17bp}%
   {\parindent \z@ \centering
-   \csname ucas@title@font\endcsname\heiti\sihao[2.41]
+   \csname bit@title@font\endcsname\heiti\sihao[2.41]
      \def\@tempa{#1}
      \def\@tempb{\eabstractname}
      \ifx\@tempa\@tempb\fi
@@ -373,28 +373,28 @@
    \interlinepenalty\@M
    #1\par\nobreak
     \vskip 16.5bp}}
-\newcounter{ucas@bookmark}
-\def\ucas@chapter*{%
+\newcounter{bit@bookmark}
+\def\bit@chapter*{%
   \@ifnextchar [ % ]
-    {\ucas@@chapter}
-    {\ucas@@chapter@}}
-\def\ucas@@chapter@#1{\ucas@@chapter[#1]{#1}}
-\def\ucas@@chapter[#1]#2{%
+    {\bit@@chapter}
+    {\bit@@chapter@}}
+\def\bit@@chapter@#1{\bit@@chapter[#1]{#1}}
+\def\bit@@chapter[#1]#2{%
   \@ifnextchar [ % ]
-    {\ucas@@@chapter[#1]{#2}}
-    {\ucas@@@chapter[#1]{#2}[]}}
-\def\ucas@@@chapter[#1]#2[#3]{%
+    {\bit@@@chapter[#1]{#2}}
+    {\bit@@@chapter[#1]{#2}[]}}
+\def\bit@@@chapter[#1]#2[#3]{%
   \cleardoublepage
   \phantomsection
   \def\@tmpa{#1}
   \def\@tmpb{#3}
   \ifx\@tmpa\@empty
     \ifx\@tmpb\@empty
-      \addtocounter{ucas@bookmark}\@ne
-      \pdfbookmark[0]{#2}{ucaschapter.\theucas@bookmark}
+      \addtocounter{bit@bookmark}\@ne
+      \pdfbookmark[0]{#2}{bitchapter.\thebit@bookmark}
     \else
-      \addtocounter{ucas@bookmark}\@ne
-      \pdfbookmark[0]{#3}{ucaschapter.\theucas@bookmark}
+      \addtocounter{bit@bookmark}\@ne
+      \pdfbookmark[0]{#3}{bitchapter.\thebit@bookmark}
     \fi
   \else
     \addcontentsline{toc}{chapter}{#1}
@@ -408,25 +408,25 @@
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                      {-8bp\@plus -1ex \@minus -.2ex}%
                      {8bp \@plus .2ex}%
-                     {\csname ucas@title@font\endcsname\heiti\xiaosi[1.75]}}
+                     {\csname bit@title@font\endcsname\heiti\xiaosi[1.75]}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                         {-4bp\@plus -1ex \@minus -.2ex}%
                         {4bp \@plus .2ex}%
-                        {\csname ucas@title@font\endcsname\heiti\xiaosi[1.75]}}
+                        {\csname bit@title@font\endcsname\heiti\xiaosi[1.75]}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                            {-4bp\@plus -1ex \@minus -.2ex}%
                            {4bp \@plus .2ex}%
-                           {\csname ucas@title@font\endcsname\heiti\xiaosi[1.75]}}
+                           {\csname bit@title@font\endcsname\heiti\xiaosi[1.75]}}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
 
 \renewcommand\tableofcontents{%
   \cleardoublepage
-  \ucas@chapter*{\contentsname}[\scontentsname]
+  \bit@chapter*{\contentsname}[\scontentsname]
   \xiaosi[1.5]\@starttoc{toc}\normalsize}
-\ifucas@arialtoc
-  \def\ucas@toc@font{\sffamily}
+\ifbit@arialtoc
+  \def\bit@toc@font{\sffamily}
 \fi
 \def\@pnumwidth{2em} % 这个参数没用了
 \def\@tocrmarg{2em}
@@ -440,7 +440,7 @@
     \leavevmode
     \@tempdima #3\relax
     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-    {\csname ucas@toc@font\endcsname #4}\nobreak
+    {\csname bit@toc@font\endcsname #4}\nobreak
     \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
     \nobreak{\normalfont \normalcolor #5}%
     \par\penalty\@highpenalty}%
@@ -456,7 +456,7 @@
       \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-      {\csname ucas@toc@font\endcsname\heiti\xiaosi #1} % numberline is called here, and it uses \@tempdima
+      {\csname bit@toc@font\endcsname\heiti\xiaosi #1} % numberline is called here, and it uses \@tempdima
       \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
       \nobreak{\normalcolor #2}\par
       \penalty\@highpenalty
@@ -465,73 +465,73 @@
 \renewcommand*\l@section{\vspace*{1ex}\@dottedtocline{1}{1.2em}{2.1em}}
 \renewcommand*\l@subsection{\vspace*{1ex}\@dottedtocline{2}{2em}{3em}}
 %%\renewcommand*\l@subsubsection{\vspace*{1ex}\@dottedtocline{3}{3.5em}{3.8em}}
-\def\ucas@define@term#1{
+\def\bit@define@term#1{
   \expandafter\gdef\csname #1\endcsname##1{%
-    \expandafter\gdef\csname ucas@#1\endcsname{##1}}
+    \expandafter\gdef\csname bit@#1\endcsname{##1}}
   \csname #1\endcsname{}}
-\ucas@define@term{catalognumber}
-\ucas@define@term{udc}
-\ucas@define@term{id}
-\ucas@define@term{secretcontent}
-\ucas@define@term{ctitle}
-\ucas@define@term{cdegree}
-\newcommand\cdepartment[2][]{\def\ucas@cdepartment@short{#1}\def\ucas@cdepartment{#2}}
+\bit@define@term{catalognumber}
+\bit@define@term{udc}
+\bit@define@term{id}
+\bit@define@term{secretcontent}
+\bit@define@term{ctitle}
+\bit@define@term{cdegree}
+\newcommand\cdepartment[2][]{\def\bit@cdepartment@short{#1}\def\bit@cdepartment{#2}}
 \def\caffil{\cdepartment} % todo: for compatibility
-\def\ucas@cdepartment@short{}
-\def\ucas@cdepartment{}
-\ucas@define@term{cmajor}
+\def\bit@cdepartment@short{}
+\def\bit@cdepartment{}
+\bit@define@term{cmajor}
 \def\csubject{\cmajor} % todo: for compatibility
-\ucas@define@term{cfirstdiscipline}
-\ucas@define@term{cseconddiscipline}
-\ucas@define@term{cauthor}
-\ucas@define@term{csupervisor}
-\ucas@define@term{csupervisorplace}
-\ucas@define@term{cassosupervisor}
-\ucas@define@term{ccosupervisor}
+\bit@define@term{cfirstdiscipline}
+\bit@define@term{cseconddiscipline}
+\bit@define@term{cauthor}
+\bit@define@term{csupervisor}
+\bit@define@term{csupervisorplace}
+\bit@define@term{cassosupervisor}
+\bit@define@term{ccosupervisor}
 
-\ucas@define@term{cdate}
-\ucas@define@term{etitle}
-\ucas@define@term{edegree}
-\ucas@define@term{edepartment}
+\bit@define@term{cdate}
+\bit@define@term{etitle}
+\bit@define@term{edegree}
+\bit@define@term{edepartment}
 \def\eaffil{\edepartment} % todo: for compability
 
-\ucas@define@term{eauthor}
-\ucas@define@term{emajor}
-\ucas@define@term{esupervisor}
-\ucas@define@term{edepartmnent}
-\ucas@define@term{edate}
+\bit@define@term{eauthor}
+\bit@define@term{emajor}
+\bit@define@term{esupervisor}
+\bit@define@term{edepartmnent}
+\bit@define@term{edate}
 \long\@xp\def\@xp\collect@@body\@xp#\@xp1\@xp\end\@xp#\@xp2\@xp{%
   \collect@@body{#1}\end{#2}}
 \long\@xp\def\@xp\push@begins\@xp#\@xp1\@xp\begin\@xp#\@xp2\@xp{%
   \push@begins{#1}\begin{#2}}
 \long\@xp\def\@xp\addto@envbody\@xp#\@xp1\@xp{%
   \addto@envbody{#1}}
-\newcommand{\ucas@@cabstract}[1]{\long\gdef\ucas@cabstract{#1}}
-\newenvironment{cabstract}{\collect@body\ucas@@cabstract}{}
-\newcommand{\ucas@@eabstract}[1]{\long\gdef\ucas@eabstract{#1}}
-\newenvironment{eabstract}{\collect@body\ucas@@eabstract}{}
-\def\ucas@parse@keywords#1{
-  \expandafter\gdef\csname ucas@#1\endcsname{} % todo: need or not?
+\newcommand{\bit@@cabstract}[1]{\long\gdef\bit@cabstract{#1}}
+\newenvironment{cabstract}{\collect@body\bit@@cabstract}{}
+\newcommand{\bit@@eabstract}[1]{\long\gdef\bit@eabstract{#1}}
+\newenvironment{eabstract}{\collect@body\bit@@eabstract}{}
+\def\bit@parse@keywords#1{
+  \expandafter\gdef\csname bit@#1\endcsname{} % todo: need or not?
   \expandafter\gdef\csname #1\endcsname##1{
     \@for\reserved@a:=##1\do{
-      \expandafter\ifx\csname ucas@#1\endcsname\@empty\else
-        \expandafter\g@addto@macro\csname ucas@#1\endcsname{\ignorespaces\csname ucas@#1@separator\endcsname}
+      \expandafter\ifx\csname bit@#1\endcsname\@empty\else
+        \expandafter\g@addto@macro\csname bit@#1\endcsname{\ignorespaces\csname bit@#1@separator\endcsname}
       \fi
       \expandafter\expandafter\expandafter\g@addto@macro%
-        \expandafter\csname ucas@#1\expandafter\endcsname\expandafter{\reserved@a}}}}
-\ucas@parse@keywords{ckeywords}
-\ucas@parse@keywords{ekeywords}
-\newcommand\ucas@underline[2][6em]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
-\newlength{\ucas@title@width}
-\def\ucas@put@title#1{\makebox[\ucas@title@width][s]{#1}}
-\def\ucas@first@titlepage{%
-  \ucas@first@titlepage@other}
+        \expandafter\csname bit@#1\expandafter\endcsname\expandafter{\reserved@a}}}}
+\bit@parse@keywords{ckeywords}
+\bit@parse@keywords{ekeywords}
+\newcommand\bit@underline[2][6em]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\newlength{\bit@title@width}
+\def\bit@put@title#1{\makebox[\bit@title@width][s]{#1}}
+\def\bit@first@titlepage{%
+  \bit@first@titlepage@other}
 \newcommand*{\getcmlength}[1]{\strip@pt\dimexpr0.035146\dimexpr#1\relax\relax}
-\newcommand{\ucas@first@titlepage@other}{
+\newcommand{\bit@first@titlepage@other}{
   \begin{center}
     \vspace*{0cm}
     \parbox[t][1cm][t]{\textwidth}{%
-      \ifucas@secret\hspace{25em}{\sihao[1]\songti 密级：\underline{\makebox[6em]{\ucas@secretcontent}}}\fi}
+      \ifbit@secret\hspace{25em}{\sihao[1]\songti 密级：\underline{\makebox[6em]{\bit@secretcontent}}}\fi}
       \begin{figure}[H]
         \centering
         \includegraphics[width=128mm,height=21.7mm]{thu-text-logo}
@@ -539,102 +539,102 @@
       \parbox[t][8cm][t]{\paperwidth-8cm}{
       \renewcommand{\baselinestretch}{1.3}
       \begin{center}
-      \yihao\heiti\ucas@apply
+      \yihao\heiti\bit@apply
       \par\vskip 40bp
-      \sanhao\heiti\ucas@ctitle
+      \sanhao\heiti\bit@ctitle
       \end{center}}
 
 \parbox[t][9cm][t]{\textwidth}{{\sihao\songti
 \begin{center}
-\setlength{\ucas@title@width}{4em}
+\setlength{\bit@title@width}{4em}
 \setlength{\extrarowheight}{2.5ex}
 \begin{tabular}{ll}
 
-\ucas@author@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cauthor}}\\
+\bit@author@title\bit@title@sep     &\underline{\makebox[25em]{\bit@cauthor}}\\
 
-\ucas@supervisor@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@csupervisor}}\\
+\bit@supervisor@title\bit@title@sep     &\underline{\makebox[25em]{\bit@csupervisor}}\\
 
-&\underline{\makebox[25em]{\ucas@csupervisorplace}}\\
+&\underline{\makebox[25em]{\bit@csupervisorplace}}\\
 
-\ucas@degree@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cdegree}}\\
+\bit@degree@title\bit@title@sep     &\underline{\makebox[25em]{\bit@cdegree}}\\
 
-\ucas@major@title\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cmajor}}\\
+\bit@major@title\bit@title@sep     &\underline{\makebox[25em]{\bit@cmajor}}\\
 
-\ucas@put@title{\ucas@department@title}\ucas@title@sep     &\underline{\makebox[25em]{\ucas@cdepartment}}\\
+\bit@put@title{\bit@department@title}\bit@title@sep     &\underline{\makebox[25em]{\bit@cdepartment}}\\
 
 \end{tabular}
 \end{center}}}
   \begin{center}
-    {\vskip 3ex\sihao \songti \ucas@cdate}
+    {\vskip 3ex\sihao \songti \bit@cdate}
   \end{center}
 \end{center}} % end of titlepage
-\newcommand{\ucas@engcover}{%
-  \def\ucas@master@art{Master of Arts}
-  \def\ucas@master@sci{Master of Science}
-  \def\ucas@doctor@phi{Doctor of Philosophy}
-  \newif\ifucas@professional
-  \ucas@professionalfalse
+\newcommand{\bit@engcover}{%
+  \def\bit@master@art{Master of Arts}
+  \def\bit@master@sci{Master of Science}
+  \def\bit@doctor@phi{Doctor of Philosophy}
+  \newif\ifbit@professional
+  \bit@professionalfalse
 
   \begin{center}
     \vspace*{0.2cm}
     \parbox[t][3.2cm][t]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.5}
       \begin{center}
-        \sanhao\sffamily\ucas@etitle
+        \sanhao\sffamily\bit@etitle
       \end{center}}
     \parbox[t][7cm][c]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.3}
       \begin{center}
         \sanhao\rmfamily by\\[3bp]
-        \rmfamily\ucas@eauthor
+        \rmfamily\bit@eauthor
       \end{center}}
 
     \parbox[t][8cm][t]{\paperwidth-7.2cm}{
       \renewcommand{\baselinestretch}{1.3}
       \begin{center}
         \sihao
-        \rmfamily A \ifucas@master Thesis \else Dissertation \fi
+        \rmfamily A \ifbit@master Thesis \else Dissertation \fi
         Submitted to\\
         {\rmfamily University of Chinese Academy of Sciences}\\
         \rmfamily in Partial Fulfillment of the Requirement\\
         \rmfamily for the Degree of\\
-        {\rmfamily\ucas@edegree}
+        {\rmfamily\bit@edegree}
 
       \end{center}}
 
     \par\vspace{0.9cm}
     \parbox[t][2cm][b]{\paperwidth-7.2cm}{
     \begin{center}
-      \sihao\rmfamily\ucas@edepartment\par\vspace*{1ex}
-      \sihao\rmfamily\ucas@edate
+      \sihao\rmfamily\bit@edepartment\par\vspace*{1ex}
+      \sihao\rmfamily\bit@edate
     \end{center}}
   \end{center}}
-\newcommand{\ucas@declare@mk}{%
-\begin{center}\sanhao\heiti{\ucas@declarename}\end{center}
+\newcommand{\bit@declare@mk}{%
+\begin{center}\sanhao\heiti{\bit@declarename}\end{center}
   \vskip40pt\sihao[2.03]\par
-  \ucas@declaretext\par
+  \bit@declaretext\par
   \vskip1.5cm
   \sihao
-  \hspace{11em}\ucas@signature\hspace{6em}\ucas@backdate
+  \hspace{11em}\bit@signature\hspace{6em}\bit@backdate
 }
-\newcommand{\ucas@authorization@mk}{%
+\newcommand{\bit@authorization@mk}{%
   \vspace*{0.72cm} % shit code!
-  \begin{center}\sanhao\heiti{\ucas@authtitle}\end{center}
+  \begin{center}\sanhao\heiti{\bit@authtitle}\end{center}
   \vskip40pt\sihao[2.03]\par
-  \ucas@authorization\par
-  \ucas@authorizationaddon\par
+  \bit@authorization\par
+  \bit@authorizationaddon\par
   \vskip1.5cm
   \sihao
-  \ucas@authorsig\hspace{6em}\ucas@teachersig\hspace{6em}\ucas@frontdate
+  \bit@authorsig\hspace{6em}\bit@teachersig\hspace{6em}\bit@frontdate
   }
 \newcommand{\makecover}{
   \phantomsection
-  \pdfbookmark[-1]{\ucas@ctitle}{ctitle}
+  \pdfbookmark[-1]{\bit@ctitle}{ctitle}
   \normalsize%
   \begin{titlepage}
-    \ucas@first@titlepage
+    \bit@first@titlepage
 \cleardoublepage
-\clearpage\ucas@engcover
+\clearpage\bit@engcover
 
       \cleardoublepage%
       \begin{list}{}{%
@@ -644,36 +644,36 @@
         \setlength{\itemsep}{5cm}
         \setlength{\leftmargin}{0.9mm}%
         \setlength{\rightmargin}{0.9mm}}%
-      \item[]\ucas@declare@mk
-      \item[]\ucas@authorization@mk%
+      \item[]\bit@declare@mk
+      \item[]\bit@authorization@mk%
       \end{list}%
   \end{titlepage}
   \normalsize
-  \ucas@makeabstract
-  \let\@tabular\ucas@tabular}
-\newcommand{\ucas@makeabstract}{%
+  \bit@makeabstract
+  \let\@tabular\bit@tabular}
+\newcommand{\bit@makeabstract}{%
   \cleardoublepage
-  \ucas@chapter*{\cabstractname}[\csabstractname] % no tocline
-  \pagestyle{ucas@plain}
+  \bit@chapter*{\cabstractname}[\csabstractname] % no tocline
+  \pagestyle{bit@plain}
   \pagenumbering{Roman}
-  \ucas@cabstract
+  \bit@cabstract
   \vskip12bp
-  \setbox0=\hbox{{\heiti\ucas@ckeywords@title}}
+  \setbox0=\hbox{{\heiti\bit@ckeywords@title}}
   \noindent\hangindent\wd0\hangafter1
-    \box0\ucas@ckeywords
+    \box0\bit@ckeywords
   \cleardoublepage
-  \ucas@chapter*[]{\ucas@etitle}[\eabstractname] % no tocline
+  \bit@chapter*[]{\bit@etitle}[\eabstractname] % no tocline
   \begin{center}
-  \ucas@eauthor\hspace{1ex}(\ucas@emajor)\\
-  Directed by \ucas@esupervisor\\
+  \bit@eauthor\hspace{1ex}(\bit@emajor)\\
+  Directed by \bit@esupervisor\\
   \end{center}
-  \hspace{2em}\ucas@eabstract
+  \hspace{2em}\bit@eabstract
   \vskip12bp
   \setbox0=\hbox{\textbf{Keywords:\enskip}}
   \noindent
-    \box0\ucas@ekeywords}
+    \box0\bit@ekeywords}
 \newenvironment{denotation}[1][2.5cm]{
-  \ucas@chapter*[]{\ucas@denotation@name} % no tocline
+  \bit@chapter*[]{\bit@denotation@name} % no tocline
   \noindent\begin{list}{}%
     {\vskip-30bp\xiaosi[1.6]
      \renewcommand\makelabel[1]{##1\hfil}
@@ -691,28 +691,28 @@
 
 \newenvironment{ack}{%
     \cleardoublepage
-    \ucas@chapter*{\ucas@ackname}[\ucas@sackname]
+    \bit@chapter*{\bit@ackname}[\bit@sackname]
   }
 
-\def\ucas@starttoc#1{% #1: float type, prepend type name in \listof*** entry.
+\def\bit@starttoc#1{% #1: float type, prepend type name in \listof*** entry.
   \let\oldnumberline\numberline
   \def\numberline##1{\oldnumberline{\csname #1name\endcsname \hskip.4em ##1}}
   \@starttoc{\csname ext@#1\endcsname}
   \let\numberline\oldnumberline}
-\def\ucas@listof#1{% #1: float type
+\def\bit@listof#1{% #1: float type
   \cleardoublepage
   \@ifstar
-    {\ucas@chapter*[]{\csname list#1name\endcsname}\ucas@starttoc{#1}}
-    {\ucas@chapter*{\csname list#1name\endcsname}\ucas@starttoc{#1}}}
-\renewcommand\listoffigures{\ucas@listof{figure}}
+    {\bit@chapter*[]{\csname list#1name\endcsname}\bit@starttoc{#1}}
+    {\bit@chapter*{\csname list#1name\endcsname}\bit@starttoc{#1}}}
+\renewcommand\listoffigures{\bit@listof{figure}}
 \renewcommand*\l@figure{\vspace*{1ex}\@dottedtocline{1}{0em}{4em}}
-\renewcommand\listoftables{\ucas@listof{table}}
+\renewcommand\listoftables{\bit@listof{table}}
 \let\l@table\l@figure
 \def\ext@equation{loe}
 \def\equcaption#1{%
   \addcontentsline{\ext@equation}{equation}%
                   {\protect\numberline{#1}}}
-\newcommand\listofequations{\ucas@listof{equation}}
+\newcommand\listofequations{\bit@listof{equation}}
 \let\l@equation\l@figure
 \bibpunct{[}{]}{,}{s}{}{,}
 \renewcommand\NAT@citesuper[3]{\ifNAT@swa%
@@ -721,11 +721,11 @@
 \DeclareRobustCommand\onlinecite{\@onlinecite}
 \def\@onlinecite#1{\begingroup\let\@cite\NAT@citenum\citep{#1}\endgroup}
 \renewcommand{\cite}[1]{{\onlinecite{#1}}}
-\def\ucasdot{\unskip.}
-\def\ucasmasterbib{[硕士学位论文]}
-\def\ucasphdbib{[博士学位论文]}
+\def\bitdot{\unskip.}
+\def\bitmasterbib{[硕士学位论文]}
+\def\bitphdbib{[博士学位论文]}
 \renewenvironment{thebibliography}[1]{%
-   \ucas@chapter*{\bibname}%
+   \bit@chapter*{\bibname}%
    \wuhao[1.5]
    \list{\@biblabel{\@arabic\c@enumiv}}%
         {\renewcommand{\makelabel}[1]{##1\hfill}
@@ -746,19 +746,19 @@
    {\def\@noitemerr
      {\@latex@warning{Empty `thebibliography' environment}}%
     \endlist\frenchspacing}
-\let\ucas@appendix\appendix
+\let\bit@appendix\appendix
 \renewenvironment{appendix}{%
-  \ucas@appendix
+  \bit@appendix
   \gdef\@chapapp{\appendixname~\thechapter}
   %\renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter-\fi\@arabic\c@equation}
   }{}
-\newenvironment{resume}[1][\ucas@resume@title]{%
+\newenvironment{resume}[1][\bit@resume@title]{%
   \cleardoublepage
-  \ucas@chapter*{#1}}{}
+  \bit@chapter*{#1}}{}
 \newcommand{\resumeitem}[1]{\vspace{2.5em}{\noindent\xiaosi\heiti 【{#1}】 \par}}
-\newcommand{\spine}[1][\ucas@ctitle]{
+\newcommand{\spine}[1][\bit@ctitle]{
   \newpage\thispagestyle{empty}\heiti\xiaosi
-  \parbox[t][23cm][t]{1em}{#1\vfill\ucas@cauthor\vfill 中国科学院大学}}
+  \parbox[t][23cm][t]{1em}{#1\vfill\bit@cauthor\vfill 中国科学院大学}}
 \iffalse
 \newcommand{\bs}{\symbol{'134}}%Print backslash
 \newcommand{\cih}[1]{%
@@ -775,16 +775,16 @@
   \texttt{#1}}
 \newcommand{\wi}[1]{\index{#1}#1}
 \fi
-\AtEndOfClass{\input{ucasthesis.cfg}}
-\def\ucas@setup@pdfinfo{%
+\AtEndOfClass{\input{bitthesis.cfg}}
+\def\bit@setup@pdfinfo{%
   \hypersetup{%
-    pdftitle={\ucas@ctitle},
-    pdfauthor={\ucas@cauthor},
-    pdfsubject={\ucas@cdegree},
-    pdfkeywords={\ucas@ckeywords},
-    pdfcreator={\ucas@cauthor},
-    pdfproducer={\ucasthesis}}}
-\AtEndOfClass{\sloppy\ucas@item@space}
+    pdftitle={\bit@ctitle},
+    pdfauthor={\bit@cauthor},
+    pdfsubject={\bit@cdegree},
+    pdfkeywords={\bit@ckeywords},
+    pdfcreator={\bit@cauthor},
+    pdfproducer={\bitthesis}}}
+\AtEndOfClass{\sloppy\bit@item@space}
 \endinput
 %%
-%% End of file `ucasthesis.cls'.
+%% End of file `bitthesis.cls'.
