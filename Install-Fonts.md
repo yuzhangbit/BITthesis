@@ -17,4 +17,4 @@ sudo mkfontsclale
 sudo mkfontdir
 sudo fc-cache -fv
 ```
-* Done!
+* done!
