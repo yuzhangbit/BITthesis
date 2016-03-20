@@ -4,4 +4,4 @@
 
 A Latex Template for BIT 
 
-* [Install Fonts needed by Ctex](Install-fonts.md)
+* [Install Fonts needed by Ctex](Install-Fonts.md)
